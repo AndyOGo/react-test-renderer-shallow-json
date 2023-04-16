@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button matches snapshot 1`] = `
+<Button
+  onClick={[MockFunction]}
+>
+  <button
+    onClick={[MockFunction]}
+    type="button"
+  />
+</Button>
+`;
+
+exports[`Empty matches snapshot 1`] = `<Empty />`;
+
+exports[`MyComponent matches snapshot 1`] = `
+<MyComponent>
+  <div>
+    <SubComponent />
+    <p
+      className="my"
+    >
+      Hello
+    </p>
+  </div>
+</MyComponent>
+`;
+
+exports[`MyComponent matches snapshot 2 level deep 1`] = `
+<MyComponent>
+  <div>
+    <SubComponent>
+      <p
+        className="sub"
+      >
+        Sub
+      </p>
+    </SubComponent>
+    <p
+      className="my"
+    >
+      Hello
+    </p>
+  </div>
+</MyComponent>
+`;
