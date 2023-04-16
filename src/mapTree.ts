@@ -23,5 +23,5 @@ export function mapTree(
     value: Symbol.for('react.test.json'),
   });
 
-  return json;
+  return json as ReactTestRendererNode;
 }

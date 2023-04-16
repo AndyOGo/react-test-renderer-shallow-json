@@ -1,5 +1,16 @@
 import type { ElementType, Key } from 'react';
-import type { ReactTestRendererTree } from 'react-test-renderer';
+import type {
+  ReactTestRendererJSON,
+  ReactTestRendererTree,
+} from 'react-test-renderer';
+
+export type ReactTestRendererJSONFixed = Omit<
+  ReactTestRendererJSON,
+  'children'
+> & {
+  children: null | string | ReactTestRendererNodeFixed[];
+};
+export type ReactTestRendererNodeFixed = ReactTestRendererJSONFixed | string;
 
 export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,

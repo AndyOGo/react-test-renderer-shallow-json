@@ -1,8 +1,14 @@
-import type { ReactTestRendererTreeChild } from './types';
+import type {
+  ReactTestRendererNodeFixed,
+  ReactTestRendererTreeChild,
+} from './types';
 import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
+import { mapChildren } from './mapChildren';
 
-export function mapChild(child: ReactTestRendererTreeChild) {
+export function mapChild(
+  child: ReactTestRendererTreeChild
+): ReactTestRendererNodeFixed {
   if (typeof child === 'string') {
     return child;
   }
@@ -10,7 +16,7 @@ export function mapChild(child: ReactTestRendererTreeChild) {
   const json = {
     type: getDisplayName(child.type),
     props: mapProps(child.props),
-    children: null,
+    children: mapChildren(child.props),
   };
 
   Object.defineProperty(json, '$$typeof', {
