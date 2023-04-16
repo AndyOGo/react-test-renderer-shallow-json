@@ -1,5 +1,5 @@
-import type { ComponentClass } from 'react';
 import { getDisplayName } from './getDisplayName';
+import { FakeFunctionComponent, FakeClassComponent } from './test-utils';
 
 describe('getDisplayName', () => {
   it('returns display name of host components', () => {
@@ -7,24 +7,10 @@ describe('getDisplayName', () => {
   });
 
   it('returns display name of function components', () => {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    function Foo() {
-      return null;
-    }
-
-    expect(getDisplayName(Foo)).toBe('Foo');
+    expect(getDisplayName(FakeFunctionComponent)).toBe('FakeFunctionComponent');
   });
 
   it('returns display name of class components', () => {
-    class Foo {
-      static displayName: string;
-
-      render() {
-        return null;
-      }
-    }
-    Foo.displayName = 'Foo';
-
-    expect(getDisplayName(Foo as unknown as ComponentClass)).toBe('Foo');
+    expect(getDisplayName(FakeClassComponent)).toBe('FakeClassComponent');
   });
 });
