@@ -1,5 +1,5 @@
-import { mapChild } from './mapChild';
 import type { ReactTestRendererTreeFixed } from './types';
+import { mapChild } from './mapChild';
 
 export function mapChildren(props: ReactTestRendererTreeFixed['props']) {
   const { children } = props;
