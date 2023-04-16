@@ -1,4 +1,4 @@
-import { dive } from './shallow-json';
+import { dive } from './shallowJSON';
 
 describe('shallow-json/dive', () => {
   it('returns same level for text nodes', () => {

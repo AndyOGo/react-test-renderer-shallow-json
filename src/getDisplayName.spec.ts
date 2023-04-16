@@ -1,7 +1,7 @@
 import type { ComponentClass } from 'react';
-import { getDisplayName } from './utils';
+import { getDisplayName } from './getDisplayName';
 
-describe('utils/getDisplayName', () => {
+describe('getDisplayName', () => {
   it('returns display name of host components', () => {
     expect(getDisplayName('div')).toBe('div');
   });

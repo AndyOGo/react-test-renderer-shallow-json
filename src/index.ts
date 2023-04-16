@@ -1,1 +1,1 @@
-export { shallowJSON } from './shallow-json';
+export { shallowJSON } from './shallowJSON';

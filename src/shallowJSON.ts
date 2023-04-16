@@ -7,7 +7,7 @@ import {
   ReactTestRendererTreeChild,
   ReactTestRendererTreeFixed,
 } from './types';
-import { getDisplayName } from './utils';
+import { getDisplayName } from './getDisplayName';
 
 export function shallowJSON(
   tree: null | ReactTestRendererTreeFixed,
