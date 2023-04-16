@@ -1,6 +1,6 @@
+import type { ReactTestRendererTreeChild } from './types';
 import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
-import type { ReactTestRendererTreeChild } from './types';
 
 export function mapChild(child: ReactTestRendererTreeChild) {
   if (typeof child === 'string') {

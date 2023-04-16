@@ -1,8 +1,9 @@
+import type { ReactTestRendererTreeChild } from './types';
 import { FakeFunctionComponent, FakeClassComponent } from './test-utils';
 import { mapChild } from './mapChild';
 
 describe('mapChild', () => {
-  it('retruns text nodes', () => {
+  it('returns text nodes', () => {
     expect(mapChild('foo bar')).toBe('foo bar');
   });
 
@@ -46,5 +47,28 @@ describe('mapChild', () => {
       props: {},
       children: null,
     });
+  });
+
+  it.each<ReactTestRendererTreeChild>([
+    {
+      type: 'div',
+      props: {},
+      key: null,
+    },
+    {
+      type: FakeFunctionComponent,
+      props: {},
+      key: null,
+    },
+    {
+      type: FakeClassComponent,
+      props: {},
+      key: null,
+    },
+  ])('define `$$typeof` property', (child) => {
+    expect(mapChild(child)).toHaveProperty(
+      '$$typeof',
+      Symbol.for('react.test.json')
+    );
   });
 });
