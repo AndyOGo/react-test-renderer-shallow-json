@@ -13,6 +13,5 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "typeRoots": ["./types", "node_modules/@types"]
   },
 }

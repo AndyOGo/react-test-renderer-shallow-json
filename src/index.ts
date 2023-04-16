@@ -1,1 +1,1 @@
-console.log('Start coding here...');
+export { shallowJSON } from './shallow-json';
