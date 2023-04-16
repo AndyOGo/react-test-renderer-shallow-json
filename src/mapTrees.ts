@@ -5,15 +5,15 @@ import { dive } from './dive';
 
 export function mapTrees(
   trees: ReactTestRendererTreeFixed['rendered'],
-  level = 1
+  depth = 1
 ): ReactTestRendererJSON['children'] {
   if (!trees) {
     return null;
   }
 
   if (Array.isArray(trees)) {
-    return trees.map((tree) => mapTree(tree, dive(tree, level)));
+    return trees.map((tree) => mapTree(tree, dive(tree, depth)));
   }
 
-  return [mapTree(trees, dive(trees, level))];
+  return [mapTree(trees, dive(trees, depth))];
 }

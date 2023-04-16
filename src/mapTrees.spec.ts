@@ -67,7 +67,7 @@ describe('mapTrees', () => {
     ]);
   });
 
-  it('dives into function components and stops at level', () => {
+  it('dives into function components and stops at depth', () => {
     expect(
       mapTrees(
         {
@@ -92,7 +92,7 @@ describe('mapTrees', () => {
     ]);
   });
 
-  it('dives into class components and stops at level', () => {
+  it('dives into class components and stops at depth', () => {
     expect(
       mapTrees(
         {

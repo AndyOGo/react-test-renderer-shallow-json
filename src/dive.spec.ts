@@ -1,11 +1,11 @@
 import { dive } from './dive';
 
 describe('dive', () => {
-  it('returns same level for text nodes', () => {
+  it('returns same depth for text nodes', () => {
     expect(dive('foo bar baz', 1)).toBe(1);
   });
 
-  it('returns same level for host components', () => {
+  it('returns same depth for host components', () => {
     expect(
       dive(
         {
@@ -19,7 +19,7 @@ describe('dive', () => {
     ).toBe(1);
   });
 
-  it('decrements level for user components', () => {
+  it('decrements depth for user components', () => {
     expect(
       dive(
         {

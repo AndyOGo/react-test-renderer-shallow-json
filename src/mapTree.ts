@@ -7,7 +7,7 @@ import { mapTrees } from './mapTrees';
 
 export function mapTree(
   tree: ReactTestRendererTreeNodeFixed,
-  level = 1
+  depth = 1
 ): ReactTestRendererNode {
   if (typeof tree === 'string') {
     return tree;
@@ -16,7 +16,7 @@ export function mapTree(
   const json = {
     type: getDisplayName(tree.type),
     props: mapProps(tree.props),
-    children: level ? mapTrees(tree.rendered, level) : mapChildren(tree.props),
+    children: depth ? mapTrees(tree.rendered, depth) : mapChildren(tree.props),
   };
 
   Object.defineProperty(json, '$$typeof', {

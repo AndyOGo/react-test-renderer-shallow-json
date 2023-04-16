@@ -2,9 +2,9 @@ import type { ReactTestRendererTreeNodeFixed } from './types';
 
 export function dive(
   tree: ReactTestRendererTreeNodeFixed,
-  level: number
+  depth: number
 ): number {
   return typeof tree === 'string' || tree.nodeType === 'host'
-    ? level
-    : level - 1;
+    ? depth
+    : depth - 1;
 }

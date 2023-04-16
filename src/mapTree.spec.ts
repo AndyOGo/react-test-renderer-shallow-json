@@ -78,7 +78,7 @@ describe('mapTree', () => {
     );
   });
 
-  it('renders tree if level greater 0', () => {
+  it('renders tree if depth greater 0', () => {
     expect(
       mapTree(
         {
@@ -107,7 +107,7 @@ describe('mapTree', () => {
     });
   });
 
-  it('renders children if level is 0', () => {
+  it('renders children if depth is 0', () => {
     expect(
       mapTree(
         {

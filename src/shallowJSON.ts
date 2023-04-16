@@ -6,7 +6,7 @@ import { mapTrees } from './mapTrees';
 
 export function shallowJSON(
   tree: null | ReactTestRendererTreeFixed,
-  level = 1
+  depth = 1
 ): null | ReactTestRendererJSON {
   if (!tree) {
     return null;
@@ -15,7 +15,7 @@ export function shallowJSON(
   const shallowJson: ReactTestRendererJSON = {
     type: getDisplayName(tree.type),
     props: mapProps(tree.props),
-    children: mapTrees(tree.rendered, level),
+    children: mapTrees(tree.rendered, depth),
   };
 
   Object.defineProperty(shallowJson, '$$typeof', {
