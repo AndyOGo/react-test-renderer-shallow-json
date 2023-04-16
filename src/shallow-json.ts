@@ -1,5 +1,9 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer';
+import type {
+  ReactTestRendererJSON,
+  ReactTestRendererNode,
+} from 'react-test-renderer';
 import {
+  ReactTestRendererTreeNodeFixed,
   ReactTestRendererTreeChild,
   ReactTestRendererTreeFixed,
 } from './types';
@@ -42,9 +46,9 @@ function mapTrees(
 }
 
 function mapTree(
-  tree: ReactTestRendererTreeFixed,
+  tree: ReactTestRendererTreeNodeFixed,
   level: number
-): ReactTestRendererJSON {
+): ReactTestRendererNode {
   if (typeof tree === 'string') {
     return tree;
   }
@@ -100,8 +104,11 @@ function mapChild(child: ReactTestRendererTreeChild) {
   return json;
 }
 
-function dive(tree: ReactTestRendererTreeFixed, level: number): number {
-  return typeof tree !== 'string' && tree.nodeType === 'host'
+export function dive(
+  tree: ReactTestRendererTreeNodeFixed,
+  level: number
+): number {
+  return typeof tree === 'string' || tree.nodeType === 'host'
     ? level
     : level - 1;
 }

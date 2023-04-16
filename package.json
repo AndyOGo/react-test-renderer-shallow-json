@@ -21,6 +21,7 @@
     "docs": "typedoc --plugin typedoc-plugin-markdown",
     "toc": "doctoc README.md --title '**Table of Contents**'",
     "test": "jest",
+    "watch": "jest --watch",
     "prepare": "husky install"
   },
   "author": "Andreas Deuschlinger",

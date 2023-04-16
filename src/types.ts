@@ -3,12 +3,19 @@ import type { ReactTestRendererTree } from 'react-test-renderer';
 
 export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,
-  'type' | 'props' | 'children' | 'rendered'
+  'type' | 'props' | 'children' | 'rendered' | 'instance'
 > & {
   type: string | ElementType;
   props: ReactTestRendererTreeProps;
-  rendered: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[];
+  rendered:
+    | null
+    | ReactTestRendererTreeNodeFixed
+    | ReactTestRendererTreeNodeFixed[];
 };
+
+export type ReactTestRendererTreeNodeFixed =
+  | string
+  | ReactTestRendererTreeFixed;
 
 type ReactTestRendererTreeProps = {
   children?: ReactTestRendererTreeChildren;
