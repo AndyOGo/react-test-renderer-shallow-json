@@ -7,7 +7,7 @@ import { mapTrees } from './mapTrees';
 
 export function mapTree(
   tree: ReactTestRendererTreeNodeFixed,
-  level: number
+  level = 1
 ): ReactTestRendererNode {
   if (typeof tree === 'string') {
     return tree;
