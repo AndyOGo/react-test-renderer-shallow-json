@@ -1,6 +1,6 @@
-import { dive } from './shallowJSON';
+import { dive } from './dive';
 
-describe('shallow-json/dive', () => {
+describe('dive', () => {
   it('returns same level for text nodes', () => {
     expect(dive('foo bar baz', 1)).toBe(1);
   });

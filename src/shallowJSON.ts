@@ -8,6 +8,7 @@ import {
   ReactTestRendererTreeFixed,
 } from './types';
 import { getDisplayName } from './getDisplayName';
+import { dive } from './dive';
 
 export function shallowJSON(
   tree: null | ReactTestRendererTreeFixed,
@@ -102,13 +103,4 @@ function mapChild(child: ReactTestRendererTreeChild) {
   });
 
   return json;
-}
-
-export function dive(
-  tree: ReactTestRendererTreeNodeFixed,
-  level: number
-): number {
-  return typeof tree === 'string' || tree.nodeType === 'host'
-    ? level
-    : level - 1;
 }
