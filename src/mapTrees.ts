@@ -5,7 +5,7 @@ import { dive } from './dive';
 
 export function mapTrees(
   trees: ReactTestRendererTreeFixed['rendered'],
-  level: number
+  level = 1
 ): ReactTestRendererJSON['children'] {
   if (!trees) {
     return null;
