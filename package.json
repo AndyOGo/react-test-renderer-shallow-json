@@ -1,6 +1,6 @@
 {
   "name": "react-test-renderer-shallow-json",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React package for shallow snapshot testing.",
   "keywords": [
     "react",
