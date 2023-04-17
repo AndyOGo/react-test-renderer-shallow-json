@@ -1,0 +1,1 @@
+export { shallowJSON } from './shallowJSON';
