@@ -1,4 +1,11 @@
-import type { Context, ElementType, NamedExoticComponent, Key } from 'react';
+import type {
+  Context,
+  ElementType,
+  ForwardRefExoticComponent,
+  ForwardRefRenderFunction,
+  NamedExoticComponent,
+  Key,
+} from 'react';
 import type {
   ReactTestRendererJSON,
   ReactTestRendererTree,
@@ -25,6 +32,13 @@ type ContextComponent = Pick<NamedExoticComponent, '$$typeof'> & {
   _context: Pick<Context<unknown>, 'displayName'>;
 };
 
+type ForwardRefComponent = Pick<
+  ForwardRefExoticComponent<unknown>,
+  '$$typeof' | 'displayName'
+> & {
+  render: ForwardRefRenderFunction<unknown>;
+};
+
 export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,
   'type' | 'props' | 'children' | 'rendered' | 'instance'
@@ -34,7 +48,8 @@ export type ReactTestRendererTreeFixed = Omit<
     | symbol
     | ElementType
     | NamedExoticComponentFixed
-    | ContextComponent;
+    | ContextComponent
+    | ForwardRefComponent;
   props: ReactTestRendererTreeProps;
   rendered:
     | null
@@ -76,5 +91,14 @@ export function isContext(
     isNamedExoticComponentType(type) &&
     (type.$$typeof === Symbol.for('react.context') ||
       type.$$typeof === Symbol.for('react.provider'))
+  );
+}
+
+export function isForwardRef(
+  type: ReactTestRendererTreeFixed['type']
+): type is ForwardRefComponent {
+  return (
+    isNamedExoticComponentType(type) &&
+    type.$$typeof === Symbol.for('react.forward_ref')
   );
 }

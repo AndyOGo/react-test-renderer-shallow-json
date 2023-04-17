@@ -1,5 +1,9 @@
 import { getDisplayName } from './getDisplayName';
-import { FakeFunctionComponent, FakeClassComponent } from './test-utils';
+import {
+  FakeFunctionComponent,
+  FakeClassComponent,
+  FakeArrowComponent,
+} from './test-utils';
 
 describe('getDisplayName', () => {
   it('returns display name of host components', () => {
@@ -20,7 +24,7 @@ describe('getDisplayName', () => {
         $$typeof: Symbol.for('react.memo'),
         type: FakeFunctionComponent,
       })
-    ).toBe('FakeFunctionComponent.Memo');
+    ).toBe('MemoFakeFunctionComponent');
   });
 
   it('returns display name of named exotic components', () => {
@@ -31,6 +35,42 @@ describe('getDisplayName', () => {
         type: FakeFunctionComponent,
       })
     ).toBe('MemoFakeFunctionComponent');
+  });
+
+  it('returns display name of anonymous forward-ref components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.forward_ref'),
+      })
+    ).toBe('ForwardRef');
+  });
+
+  it('returns display name of arrow forward-ref components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.forward_ref'),
+        render: FakeArrowComponent,
+      })
+    ).toBe('ForwardRefFakeArrowComponent');
+  });
+
+  it('returns display name of forward-ref components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.forward_ref'),
+        render: FakeFunctionComponent,
+      })
+    ).toBe('ForwardRefFakeFunctionComponent');
+  });
+
+  it('returns display name of named forward-ref components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.forward_ref'),
+        displayName: 'ForwardRefFakeFunctionComponent',
+        type: FakeFunctionComponent,
+      })
+    ).toBe('ForwardRefFakeFunctionComponent');
   });
 
   it('returns display name of context components', () => {

@@ -6,6 +6,9 @@ export function FakeFunctionComponent() {
 }
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
+export const FakeArrowComponent = () => null;
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
 class _FakeClassComponent {
   static displayName: string;
 }
