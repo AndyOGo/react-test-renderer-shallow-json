@@ -8,7 +8,7 @@ export type ReactTestRendererJSONFixed = Omit<
   ReactTestRendererJSON,
   'children'
 > & {
-  children: null | string | ReactTestRendererNodeFixed[];
+  children: null | ReactTestRendererJSONFixed | ReactTestRendererNodeFixed[];
 };
 export type ReactTestRendererNodeFixed = ReactTestRendererJSONFixed | string;
 
@@ -29,7 +29,12 @@ export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,
   'type' | 'props' | 'children' | 'rendered' | 'instance'
 > & {
-  type: string | ElementType | NamedExoticComponentFixed | ContextComponent;
+  type:
+    | string
+    | symbol
+    | ElementType
+    | NamedExoticComponentFixed
+    | ContextComponent;
   props: ReactTestRendererTreeProps;
   rendered:
     | null
@@ -61,7 +66,7 @@ export type ReactTestRendererTreeChild =
 export function isNamedExoticComponentType(
   type: ReactTestRendererTreeFixed['type']
 ): type is NamedExoticComponentFixed {
-  return !!type && typeof type !== 'string' && '$$typeof' in type;
+  return !!type && typeof type === 'object' && '$$typeof' in type;
 }
 
 export function isContext(

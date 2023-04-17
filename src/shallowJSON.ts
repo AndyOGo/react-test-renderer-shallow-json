@@ -6,6 +6,23 @@ import { mapTrees } from './mapTrees';
 import { dive } from './dive';
 
 export function shallowJSON(
+  trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[],
+  depth = 1
+): null | ReactTestRendererJSON {
+  if (!trees) {
+    return null;
+  }
+
+  if (Array.isArray(trees)) {
+    return trees.map((tree) => {
+      return mapShallowTree(tree, depth);
+    }) as unknown as ReactTestRendererJSON;
+  }
+
+  return mapShallowTree(trees, depth);
+}
+
+function mapShallowTree(
   tree: null | ReactTestRendererTreeFixed,
   depth = 1
 ): null | ReactTestRendererJSON {

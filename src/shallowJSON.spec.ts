@@ -77,4 +77,45 @@ describe('shallowJSON', () => {
       Symbol.for('react.test.json')
     );
   });
+
+  it('returns fragment components', () => {
+    expect(
+      shallowJSON([
+        {
+          nodeType: 'host',
+          type: 'div',
+          props: {},
+          rendered: null,
+        },
+        {
+          nodeType: 'component',
+          type: FakeFunctionComponent,
+          props: {},
+          rendered: null,
+        },
+        {
+          nodeType: 'component',
+          type: FakeClassComponent,
+          props: {},
+          rendered: null,
+        },
+      ])
+    ).toEqual([
+      {
+        type: 'div',
+        props: {},
+        children: null,
+      },
+      {
+        type: 'FakeFunctionComponent',
+        props: {},
+        children: null,
+      },
+      {
+        type: 'FakeClassComponent',
+        props: {},
+        children: null,
+      },
+    ]);
+  });
 });

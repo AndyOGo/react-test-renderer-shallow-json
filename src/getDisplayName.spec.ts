@@ -40,7 +40,7 @@ describe('getDisplayName', () => {
         // eslint-disable-next-line @typescript-eslint/naming-convention
         _context: {},
       })
-    ).toBe('???.Consumer');
+    ).toBe('Context.Consumer');
 
     expect(
       getDisplayName({
@@ -48,7 +48,7 @@ describe('getDisplayName', () => {
         // eslint-disable-next-line @typescript-eslint/naming-convention
         _context: {},
       })
-    ).toBe('???.Provider');
+    ).toBe('Context.Provider');
   });
 
   it('returns display name of named exotic components', () => {
@@ -78,7 +78,7 @@ describe('getDisplayName', () => {
       getDisplayName(function () {
         return null;
       })
-    ).toBe('???');
+    ).toBe('UNDEFINED');
   });
 
   it('returns default fallback of anonymous components', () => {
@@ -88,4 +88,11 @@ describe('getDisplayName', () => {
       }, 'FALLBACK')
     ).toBe('FALLBACK');
   });
+
+  it.each([[Symbol.for('react.fragment'), 'React.Fragment']])(
+    'type of symbol %s returns display name %s',
+    (symbol, displayName) => {
+      expect(getDisplayName(symbol)).toBe(displayName);
+    }
+  );
 });
