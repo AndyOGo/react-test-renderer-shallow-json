@@ -13,9 +13,11 @@ export function mapChild(
     return child;
   }
 
+  const { key } = child;
+
   const json = {
     type: getDisplayName(child.type),
-    props: mapProps(child.props),
+    props: mapProps({ ...child.props, ...(key && { key }) }),
     children: mapChildren(child.props),
   };
 

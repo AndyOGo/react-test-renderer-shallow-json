@@ -29,13 +29,19 @@ exports[`Empty matches snapshot 1`] = `<EmptyDisplayName />`;
 exports[`List matches named snapshot 1`] = `
 <ListDisplayName>
   <ul>
-    <ListItemDisplayName>
+    <ListItemDisplayName
+      key="0"
+    >
       A
     </ListItemDisplayName>
-    <ListItemDisplayName>
+    <ListItemDisplayName
+      key="1"
+    >
       B
     </ListItemDisplayName>
-    <ListItemDisplayName>
+    <ListItemDisplayName
+      key="2"
+    >
       C
     </ListItemDisplayName>
   </ul>
@@ -45,13 +51,19 @@ exports[`List matches named snapshot 1`] = `
 exports[`List matches snapshot 1`] = `
 <ListDisplayName>
   <ul>
-    <MemoListItemDisplayName>
+    <MemoListItemDisplayName
+      key="0"
+    >
       A
     </MemoListItemDisplayName>
-    <MemoListItemDisplayName>
+    <MemoListItemDisplayName
+      key="1"
+    >
       B
     </MemoListItemDisplayName>
-    <MemoListItemDisplayName>
+    <MemoListItemDisplayName
+      key="2"
+    >
       C
     </MemoListItemDisplayName>
   </ul>
@@ -88,25 +100,41 @@ exports[`Table matches named snapshot 1`] = `
       </TableRowDisplayName>
     </TableFootDisplayName>
     <TableBodyDisplayName>
-      <TableRowDisplayName>
-        <TableCellDisplayName>
+      <TableRowDisplayName
+        key="0"
+      >
+        <TableCellDisplayName
+          key="0"
+        >
           A
         </TableCellDisplayName>
-        <TableCellDisplayName>
+        <TableCellDisplayName
+          key="1"
+        >
           B
         </TableCellDisplayName>
-        <TableCellDisplayName>
+        <TableCellDisplayName
+          key="2"
+        >
           C
         </TableCellDisplayName>
       </TableRowDisplayName>
-      <TableRowDisplayName>
-        <TableCellDisplayName>
+      <TableRowDisplayName
+        key="1"
+      >
+        <TableCellDisplayName
+          key="0"
+        >
           X
         </TableCellDisplayName>
-        <TableCellDisplayName>
+        <TableCellDisplayName
+          key="1"
+        >
           Y
         </TableCellDisplayName>
-        <TableCellDisplayName>
+        <TableCellDisplayName
+          key="2"
+        >
           Z
         </TableCellDisplayName>
       </TableRowDisplayName>
@@ -145,25 +173,41 @@ exports[`Table matches snapshot 1`] = `
       </MemoTableRowDisplayName>
     </MemoTableFootDisplayName>
     <MemoTableBodyDisplayName>
-      <MemoTableRowDisplayName>
-        <MemoTableCellDisplayName>
+      <MemoTableRowDisplayName
+        key="0"
+      >
+        <MemoTableCellDisplayName
+          key="0"
+        >
           A
         </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
+        <MemoTableCellDisplayName
+          key="1"
+        >
           B
         </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
+        <MemoTableCellDisplayName
+          key="2"
+        >
           C
         </MemoTableCellDisplayName>
       </MemoTableRowDisplayName>
-      <MemoTableRowDisplayName>
-        <MemoTableCellDisplayName>
+      <MemoTableRowDisplayName
+        key="1"
+      >
+        <MemoTableCellDisplayName
+          key="0"
+        >
           X
         </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
+        <MemoTableCellDisplayName
+          key="1"
+        >
           Y
         </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
+        <MemoTableCellDisplayName
+          key="2"
+        >
           Z
         </MemoTableCellDisplayName>
       </MemoTableRowDisplayName>
