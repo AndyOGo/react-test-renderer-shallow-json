@@ -13,4 +13,39 @@ describe('getDisplayName', () => {
   it('returns display name of class components', () => {
     expect(getDisplayName(FakeClassComponent)).toBe('FakeClassComponent');
   });
+
+  it('returns display name of exotic components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.memo'),
+        type: FakeFunctionComponent,
+      })
+    ).toBe('FakeFunctionComponent');
+  });
+
+  it('returns display name of named exotic components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.memo'),
+        displayName: 'MemoFakeFunctionComponent',
+        type: FakeFunctionComponent,
+      })
+    ).toBe('MemoFakeFunctionComponent');
+  });
+
+  it('returns default fallback of anonymous components', () => {
+    expect(
+      getDisplayName(function () {
+        return null;
+      })
+    ).toBe('???');
+  });
+
+  it('returns default fallback of anonymous components', () => {
+    expect(
+      getDisplayName(function () {
+        return null;
+      }, 'FALLBACK')
+    ).toBe('FALLBACK');
+  });
 });

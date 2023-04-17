@@ -1,4 +1,4 @@
-import type { ElementType, Key } from 'react';
+import type { ElementType, NamedExoticComponent, Key } from 'react';
 import type {
   ReactTestRendererJSON,
   ReactTestRendererTree,
@@ -12,11 +12,18 @@ export type ReactTestRendererJSONFixed = Omit<
 };
 export type ReactTestRendererNodeFixed = ReactTestRendererJSONFixed | string;
 
+type NamedExoticComponentFixed = Pick<
+  NamedExoticComponent,
+  '$$typeof' | 'displayName'
+> & {
+  type?: ReactTestRendererTreeFixed['type'];
+};
+
 export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,
   'type' | 'props' | 'children' | 'rendered' | 'instance'
 > & {
-  type: string | ElementType;
+  type: string | ElementType | NamedExoticComponentFixed;
   props: ReactTestRendererTreeProps;
   rendered:
     | null
@@ -44,3 +51,9 @@ export type ReactTestRendererTreeChild =
       type: string | ElementType;
       key: null | Key;
     };
+
+export function isNamedExoticComponentType(
+  type: ReactTestRendererTreeFixed['type']
+): type is NamedExoticComponentFixed {
+  return !!type && typeof type !== 'string' && '$$typeof' in type;
+}
