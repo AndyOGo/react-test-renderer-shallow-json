@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal matches snapshot 1`] = `
+<Modal>
+  <div
+    date-fake-portal-container={true}
+  >
+    This is a modal
+  </div>
+</Modal>
+`;

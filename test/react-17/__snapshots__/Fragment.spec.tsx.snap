@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fragment matches snapshot 1`] = `
+[
+  <div />,
+  <TestWrapper>
+    <div />
+  </TestWrapper>,
+]
+`;
+
+exports[`Fragment matches snapshot 2`] = `
+[
+  <div />,
+  <TestWrapper>
+    <div />
+  </TestWrapper>,
+]
+`;
+
+exports[`Fragment matches snapshot as children 1`] = `
+<TestWrapper>
+  <div>
+    <React.Fragment>
+      <div />
+      <TestWrapper />
+    </React.Fragment>
+  </div>
+</TestWrapper>
+`;
+
+exports[`Fragment matches snapshot as children 2`] = `
+<TestWrapper>
+  <div>
+    <React.Fragment>
+      <div />
+      <TestWrapper />
+    </React.Fragment>
+  </div>
+</TestWrapper>
+`;

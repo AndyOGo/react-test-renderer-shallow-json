@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button matches named snapshot 1`] = `
+<ButtonDisplayName
+  onClick={[MockFunction]}
+>
+  <button
+    onClick={[MockFunction]}
+    type="button"
+  />
+</ButtonDisplayName>
+`;
+
+exports[`Button matches snapshot 1`] = `
+<ButtonDisplayName
+  onClick={[MockFunction]}
+>
+  <button
+    onClick={[MockFunction]}
+    type="button"
+  />
+</ButtonDisplayName>
+`;
+
+exports[`Empty matches named snapshot 1`] = `<EmptyDisplayName />`;
+
+exports[`Empty matches snapshot 1`] = `<EmptyDisplayName />`;
+
+exports[`List matches named snapshot 1`] = `
+<ListDisplayName>
+  <ul>
+    <ListItemDisplayName>
+      A
+    </ListItemDisplayName>
+    <ListItemDisplayName>
+      B
+    </ListItemDisplayName>
+    <ListItemDisplayName>
+      C
+    </ListItemDisplayName>
+  </ul>
+</ListDisplayName>
+`;
+
+exports[`List matches snapshot 1`] = `
+<ListDisplayName>
+  <ul>
+    <MemoListItemDisplayName>
+      A
+    </MemoListItemDisplayName>
+    <MemoListItemDisplayName>
+      B
+    </MemoListItemDisplayName>
+    <MemoListItemDisplayName>
+      C
+    </MemoListItemDisplayName>
+  </ul>
+</ListDisplayName>
+`;
+
+exports[`Table matches named snapshot 1`] = `
+<TableDisplayName>
+  <table>
+    <TableHeadDisplayName>
+      <TableRowDisplayName>
+        <TableHeadCellDisplayName>
+          Head A
+        </TableHeadCellDisplayName>
+        <TableHeadCellDisplayName>
+          Head B
+        </TableHeadCellDisplayName>
+        <TableHeadCellDisplayName>
+          Head C
+        </TableHeadCellDisplayName>
+      </TableRowDisplayName>
+    </TableHeadDisplayName>
+    <TableFootDisplayName>
+      <TableRowDisplayName>
+        <TableCellDisplayName>
+          Foot A
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          Foot B
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          Foot C
+        </TableCellDisplayName>
+      </TableRowDisplayName>
+    </TableFootDisplayName>
+    <TableBodyDisplayName>
+      <TableRowDisplayName>
+        <TableCellDisplayName>
+          A
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          B
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          C
+        </TableCellDisplayName>
+      </TableRowDisplayName>
+      <TableRowDisplayName>
+        <TableCellDisplayName>
+          X
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          Y
+        </TableCellDisplayName>
+        <TableCellDisplayName>
+          Z
+        </TableCellDisplayName>
+      </TableRowDisplayName>
+    </TableBodyDisplayName>
+  </table>
+</TableDisplayName>
+`;
+
+exports[`Table matches snapshot 1`] = `
+<TableDisplayName>
+  <table>
+    <MemoTableHeadDisplayName>
+      <MemoTableRowDisplayName>
+        <MemoTableHeadCellDisplayName>
+          Head A
+        </MemoTableHeadCellDisplayName>
+        <MemoTableHeadCellDisplayName>
+          Head B
+        </MemoTableHeadCellDisplayName>
+        <MemoTableHeadCellDisplayName>
+          Head C
+        </MemoTableHeadCellDisplayName>
+      </MemoTableRowDisplayName>
+    </MemoTableHeadDisplayName>
+    <MemoTableFootDisplayName>
+      <MemoTableRowDisplayName>
+        <MemoTableCellDisplayName>
+          Foot A
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          Foot B
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          Foot C
+        </MemoTableCellDisplayName>
+      </MemoTableRowDisplayName>
+    </MemoTableFootDisplayName>
+    <MemoTableBodyDisplayName>
+      <MemoTableRowDisplayName>
+        <MemoTableCellDisplayName>
+          A
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          B
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          C
+        </MemoTableCellDisplayName>
+      </MemoTableRowDisplayName>
+      <MemoTableRowDisplayName>
+        <MemoTableCellDisplayName>
+          X
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          Y
+        </MemoTableCellDisplayName>
+        <MemoTableCellDisplayName>
+          Z
+        </MemoTableCellDisplayName>
+      </MemoTableRowDisplayName>
+    </MemoTableBodyDisplayName>
+  </table>
+</TableDisplayName>
+`;
