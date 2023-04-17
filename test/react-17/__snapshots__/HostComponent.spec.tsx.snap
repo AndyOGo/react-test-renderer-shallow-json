@@ -8,6 +8,18 @@ exports[`HostComponent matches self-closing snapshot with click handler 1`] = `
 />
 `;
 
+exports[`HostComponent matches self-closing snapshot with key 1`] = `<div />`;
+
+exports[`HostComponent matches self-closing snapshot with key as children 1`] = `
+<TestWrapper>
+  <div>
+    <div
+      key="foo"
+    />
+  </div>
+</TestWrapper>
+`;
+
 exports[`HostComponent matches self-closing snapshot with prop 1`] = `
 <div
   className="foo"
@@ -19,6 +31,22 @@ exports[`HostComponent matches self-closing snapshot with props 1`] = `
   className="foo"
   title="title"
 />
+`;
+
+exports[`HostComponent matches self-closing snapshot with ref 1`] = `<div />`;
+
+exports[`HostComponent matches self-closing snapshot with ref as children 1`] = `
+<TestWrapper>
+  <div>
+    <div
+      ref={
+        {
+          "current": null,
+        }
+      }
+    />
+  </div>
+</TestWrapper>
 `;
 
 exports[`HostComponent matches snapshot with children 1`] = `
