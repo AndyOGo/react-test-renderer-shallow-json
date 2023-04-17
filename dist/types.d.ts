@@ -1,4 +1,4 @@
-import type { Context, ElementType, ForwardRefExoticComponent, ForwardRefRenderFunction, NamedExoticComponent, Key } from 'react';
+import type { Context, ElementType, ForwardRefExoticComponent, ForwardRefRenderFunction, NamedExoticComponent, Key, LegacyRef } from 'react';
 import type { ReactTestRendererJSON, ReactTestRendererTree } from 'react-test-renderer';
 export type ReactTestRendererJSONFixed = Omit<ReactTestRendererJSON, 'children'> & {
     children: null | ReactTestRendererJSONFixed | ReactTestRendererNodeFixed[];
@@ -29,6 +29,7 @@ export type ReactTestRendererTreeChild = string | {
     props: ReactTestRendererTreeProps;
     type: string | ElementType;
     key: null | Key;
+    ref?: LegacyRef<unknown>;
 };
 export declare function isNamedExoticComponentType(type: ReactTestRendererTreeFixed['type']): type is NamedExoticComponentFixed;
 export declare function isContext(type: ReactTestRendererTreeFixed['type']): type is ContextComponent;

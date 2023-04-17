@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.1...v1.0.2) (2023-04-17)
+
+
+### Bug Fixes
+
+* add ref prop ([fe39915](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/fe399152b874bb1710a3ef61d307f3d3c38b7338))
+
 ## [1.0.1](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.0...v1.0.1) (2023-04-17)
 
 
