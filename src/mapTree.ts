@@ -4,6 +4,7 @@ import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
 import { mapChildren } from './mapChildren';
 import { mapTrees } from './mapTrees';
+import { withReactTestSymbol } from './withReactTestSymbol';
 
 export function mapTree(
   tree: ReactTestRendererTreeNodeFixed,
@@ -19,9 +20,5 @@ export function mapTree(
     children: depth ? mapTrees(tree.rendered, depth) : mapChildren(tree.props),
   };
 
-  Object.defineProperty(json, '$$typeof', {
-    value: Symbol.for('react.test.json'),
-  });
-
-  return json as ReactTestRendererNode;
+  return withReactTestSymbol(json) as ReactTestRendererNode;
 }

@@ -4,6 +4,7 @@ import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
 import { mapTrees } from './mapTrees';
 import { dive } from './dive';
+import { withReactTestSymbol } from './withReactTestSymbol';
 
 export function shallowJSON(
   trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[],
@@ -36,9 +37,5 @@ function mapShallowTree(
     children: mapTrees(tree.rendered, dive(tree, depth)),
   };
 
-  Object.defineProperty(shallowJson, '$$typeof', {
-    value: Symbol.for('react.test.json'),
-  });
-
-  return shallowJson;
+  return withReactTestSymbol(shallowJson);
 }
