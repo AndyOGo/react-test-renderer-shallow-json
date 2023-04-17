@@ -5,6 +5,7 @@ import type {
   ForwardRefRenderFunction,
   NamedExoticComponent,
   Key,
+  LegacyRef,
 } from 'react';
 import type {
   ReactTestRendererJSON,
@@ -76,6 +77,7 @@ export type ReactTestRendererTreeChild =
       props: ReactTestRendererTreeProps;
       type: string | ElementType;
       key: null | Key;
+      ref?: LegacyRef<unknown>;
     };
 
 export function isNamedExoticComponentType(

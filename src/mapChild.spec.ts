@@ -79,6 +79,34 @@ describe('mapChild', () => {
       type: 'div',
       props: {},
       key: null,
+      ref: '[REF]',
+    },
+    {
+      type: FakeFunctionComponent,
+      props: {},
+      key: null,
+      ref: '[REF]',
+    },
+    {
+      type: FakeClassComponent,
+      props: {},
+      key: null,
+      ref: '[REF]',
+    },
+  ])('define `ref` prop', (child) => {
+    expect(mapChild(child)).toHaveProperty(
+      'props',
+      expect.objectContaining({
+        ref: '[REF]',
+      })
+    );
+  });
+
+  it.each<ReactTestRendererTreeChild>([
+    {
+      type: 'div',
+      props: {},
+      key: null,
     },
     {
       type: FakeFunctionComponent,
