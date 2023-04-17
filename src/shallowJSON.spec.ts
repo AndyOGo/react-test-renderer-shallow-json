@@ -71,7 +71,7 @@ describe('shallowJSON', () => {
       props: {},
       rendered: null,
     },
-  ])('define `$$typeof` property', (child) => {
+  ])('defines `$$typeof` property', (child) => {
     expect(shallowJSON(child)).toHaveProperty(
       '$$typeof',
       Symbol.for('react.test.json')

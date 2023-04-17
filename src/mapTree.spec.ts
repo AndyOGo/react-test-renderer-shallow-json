@@ -71,7 +71,7 @@ describe('mapTree', () => {
       props: {},
       rendered: null,
     },
-  ])('define `$$typeof` property', (child) => {
+  ])('defines `$$typeof` property', (child) => {
     expect(mapTree(child)).toHaveProperty(
       '$$typeof',
       Symbol.for('react.test.json')
