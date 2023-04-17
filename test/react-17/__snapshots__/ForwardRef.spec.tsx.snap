@@ -5,7 +5,13 @@ exports[`FancyDiv matches snapshot 1`] = `<div />`;
 exports[`FancyDiv matches snapshot as children 1`] = `
 <TestWrapper>
   <div>
-    <ForwardRefFancyDivInner />
+    <ForwardRefFancyDivInner
+      ref={
+        {
+          "current": null,
+        }
+      }
+    />
   </div>
 </TestWrapper>
 `;
@@ -15,7 +21,13 @@ exports[`FancyDivArrow matches snapshot 1`] = `<div />`;
 exports[`FancyDivArrow matches snapshot as children 1`] = `
 <TestWrapper>
   <div>
-    <ForwardRef />
+    <ForwardRef
+      ref={
+        {
+          "current": null,
+        }
+      }
+    />
   </div>
 </TestWrapper>
 `;
@@ -25,7 +37,13 @@ exports[`FancyDivNamed matches snapshot 1`] = `<div />`;
 exports[`FancyDivNamed matches snapshot as children 1`] = `
 <TestWrapper>
   <div>
-    <FancyDivDisplayName />
+    <FancyDivDisplayName
+      ref={
+        {
+          "current": null,
+        }
+      }
+    />
   </div>
 </TestWrapper>
 `;
