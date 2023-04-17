@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.0...v1.0.1) (2023-04-17)
+
+
+### Bug Fixes
+
+* add key prop of children ([9bd258c](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/9bd258cdd06020723ed84db8aedb98ff0d6407b4))
+
 # 1.0.0 (2023-04-17)
 
 
