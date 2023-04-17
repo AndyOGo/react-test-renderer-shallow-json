@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button matches snapshot 1`] = `
+<Button
+  onClick={[MockFunction]}
+>
+  <button
+    onClick={[MockFunction]}
+    type="button"
+  />
+</Button>
+`;
+
+exports[`Empty matches snapshot 1`] = `<Empty />`;
+
+exports[`List matches snapshot 1`] = `
+<List>
+  <ul>
+    <ListItem>
+      A
+    </ListItem>
+    <ListItem>
+      B
+    </ListItem>
+    <ListItem>
+      C
+    </ListItem>
+  </ul>
+</List>
+`;
+
+exports[`MyComponent matches snapshot 1`] = `
+<MyComponent>
+  <div>
+    <Empty />
+    <SubComponent />
+    <SubComponent>
+      <span>
+        Sub host
+      </span>
+      <SubComponent>
+        <span>
+          Sub sub host
+        </span>
+      </SubComponent>
+      <div>
+        condition
+      </div>
+    </SubComponent>
+    <SubComponent>
+      <SubComponent />
+    </SubComponent>
+    <p
+      className="my"
+    >
+      Hello
+    </p>
+  </div>
+</MyComponent>
+`;
+
+exports[`MyComponent matches snapshot 2 level deep 1`] = `
+<MyComponent>
+  <div>
+    <Empty />
+    <SubComponent />
+    <SubComponent>
+      <span>
+        Sub host
+      </span>
+      <SubComponent>
+        <span>
+          Sub sub host
+        </span>
+      </SubComponent>
+      <div>
+        condition
+      </div>
+    </SubComponent>
+    <SubComponent>
+      <SubComponent />
+    </SubComponent>
+    <p
+      className="my"
+    >
+      Hello
+    </p>
+  </div>
+</MyComponent>
+`;
+
+exports[`Table matches snapshot 1`] = `
+<Table>
+  <table>
+    <TableHead>
+      <TableRow>
+        <TableHeadCell>
+          Head A
+        </TableHeadCell>
+        <TableHeadCell>
+          Head B
+        </TableHeadCell>
+        <TableHeadCell>
+          Head C
+        </TableHeadCell>
+      </TableRow>
+    </TableHead>
+    <TableFoot>
+      <TableRow>
+        <TableCell>
+          Foot A
+        </TableCell>
+        <TableCell>
+          Foot B
+        </TableCell>
+        <TableCell>
+          Foot C
+        </TableCell>
+      </TableRow>
+    </TableFoot>
+    <TableBody>
+      <TableRow>
+        <TableCell>
+          A
+        </TableCell>
+        <TableCell>
+          B
+        </TableCell>
+        <TableCell>
+          C
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+          X
+        </TableCell>
+        <TableCell>
+          Y
+        </TableCell>
+        <TableCell>
+          Z
+        </TableCell>
+      </TableRow>
+    </TableBody>
+  </table>
+</Table>
+`;

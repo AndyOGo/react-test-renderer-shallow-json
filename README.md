@@ -5,6 +5,8 @@
 **Table of Contents**
 
 - [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -14,6 +16,39 @@
 ```sh
 npm install --save-dev react-test-renderer-shallow-json
 ```
+
+# Usage
+
+Replace your [`.toJSON()`](https://legacy.reactjs.org/docs/test-renderer.html#testrenderertojson) based snapshot by a call to `shallowJSON()` with the result of [`.toTree()`](https://legacy.reactjs.org/docs/test-renderer.html#testrenderertotree) as it's argument.
+
+```js
+import TestRenderer from 'react-test-renderer';
+import shallowJSON from 'react-test-renderer-shallow-json';
+
+function MyComponent() {
+  return (
+    <div>
+      <SubComponent foo="bar" />
+      <p className="my">Hello</p>
+    </div>
+  )
+}
+
+function SubComponent() {
+  return (
+    <p className="sub">Sub</p>
+  );
+}
+
+const testRenderer = TestRenderer.create(<MyComponent />);
+
+console.log(shallowJSON(testRenderer.toTree()));
+```
+
+# API
+
+Please find the API docs at [`./docs/README.md`](./docs/README.md).
+
 # License
 
 The MIT License (MIT)

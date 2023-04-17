@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FancyDiv matches snapshot 1`] = `<div />`;
+
+exports[`FancyDiv matches snapshot as children 1`] = `
+<TestWrapper>
+  <div>
+    <ForwardRefFancyDivInner />
+  </div>
+</TestWrapper>
+`;
+
+exports[`FancyDivArrow matches snapshot 1`] = `<div />`;
+
+exports[`FancyDivArrow matches snapshot as children 1`] = `
+<TestWrapper>
+  <div>
+    <ForwardRef />
+  </div>
+</TestWrapper>
+`;
+
+exports[`FancyDivNamed matches snapshot 1`] = `<div />`;
+
+exports[`FancyDivNamed matches snapshot as children 1`] = `
+<TestWrapper>
+  <div>
+    <FancyDivDisplayName />
+  </div>
+</TestWrapper>
+`;
+
+exports[`TestRef matches snapshot 1`] = `
+<TestRef>
+  <div />
+</TestRef>
+`;
+
+exports[`TestRef matches snapshot as children 1`] = `
+<TestWrapper>
+  <div>
+    <TestRef />
+  </div>
+</TestWrapper>
+`;

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HostComponent matches self-closing snapshot 1`] = `<div />`;
+
+exports[`HostComponent matches self-closing snapshot with click handler 1`] = `
+<button
+  onClick={[MockFunction]}
+/>
+`;
+
+exports[`HostComponent matches self-closing snapshot with prop 1`] = `
+<div
+  className="foo"
+/>
+`;
+
+exports[`HostComponent matches self-closing snapshot with props 1`] = `
+<div
+  className="foo"
+  title="title"
+/>
+`;
+
+exports[`HostComponent matches snapshot with children 1`] = `
+<div
+  className="foo"
+>
+  <h1>
+    heading
+  </h1>
+  <div>
+    <p>
+      lorem ipsum
+    </p>
+  </div>
+  <button
+    onClick={[MockFunction]}
+    type="button"
+  >
+    Click me
+  </button>
+</div>
+`;
+
+exports[`HostComponent matches snapshot with text 1`] = `
+<div>
+  lorem ipsum
+</div>
+`;
+
+exports[`HostComponent matches snapshot with text and with prop 1`] = `
+<div
+  className="foo"
+>
+  lorem ipsum
+</div>
+`;
+
+exports[`HostComponent matches snapshot with text and with props 1`] = `
+<div
+  className="foo"
+  title="title"
+>
+  lorem ipsum
+</div>
+`;
