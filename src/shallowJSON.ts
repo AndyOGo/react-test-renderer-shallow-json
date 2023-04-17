@@ -3,6 +3,7 @@ import { ReactTestRendererTreeFixed } from './types';
 import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
 import { mapTrees } from './mapTrees';
+import { dive } from './dive';
 
 export function shallowJSON(
   tree: null | ReactTestRendererTreeFixed,
@@ -15,7 +16,7 @@ export function shallowJSON(
   const shallowJson: ReactTestRendererJSON = {
     type: getDisplayName(tree.type),
     props: mapProps(tree.props),
-    children: mapTrees(tree.rendered, depth),
+    children: mapTrees(tree.rendered, dive(tree, depth)),
   };
 
   Object.defineProperty(shallowJson, '$$typeof', {
