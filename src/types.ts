@@ -1,4 +1,4 @@
-import type { ElementType, NamedExoticComponent, Key } from 'react';
+import type { Context, ElementType, NamedExoticComponent, Key } from 'react';
 import type {
   ReactTestRendererJSON,
   ReactTestRendererTree,
@@ -19,11 +19,17 @@ type NamedExoticComponentFixed = Pick<
   type?: ReactTestRendererTreeFixed['type'];
 };
 
+type ContextComponent = Pick<NamedExoticComponent, '$$typeof'> & {
+  type?: ReactTestRendererTreeFixed['type'];
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  _context: Pick<Context<unknown>, 'displayName'>;
+};
+
 export type ReactTestRendererTreeFixed = Omit<
   ReactTestRendererTree,
   'type' | 'props' | 'children' | 'rendered' | 'instance'
 > & {
-  type: string | ElementType | NamedExoticComponentFixed;
+  type: string | ElementType | NamedExoticComponentFixed | ContextComponent;
   props: ReactTestRendererTreeProps;
   rendered:
     | null
@@ -56,4 +62,14 @@ export function isNamedExoticComponentType(
   type: ReactTestRendererTreeFixed['type']
 ): type is NamedExoticComponentFixed {
   return !!type && typeof type !== 'string' && '$$typeof' in type;
+}
+
+export function isContext(
+  type: ReactTestRendererTreeFixed['type']
+): type is ContextComponent {
+  return (
+    isNamedExoticComponentType(type) &&
+    (type.$$typeof === Symbol.for('react.context') ||
+      type.$$typeof === Symbol.for('react.provider'))
+  );
 }

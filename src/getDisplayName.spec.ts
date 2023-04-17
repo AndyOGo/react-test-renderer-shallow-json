@@ -20,7 +20,7 @@ describe('getDisplayName', () => {
         $$typeof: Symbol.for('react.memo'),
         type: FakeFunctionComponent,
       })
-    ).toBe('FakeFunctionComponent');
+    ).toBe('FakeFunctionComponent.Memo');
   });
 
   it('returns display name of named exotic components', () => {
@@ -31,6 +31,46 @@ describe('getDisplayName', () => {
         type: FakeFunctionComponent,
       })
     ).toBe('MemoFakeFunctionComponent');
+  });
+
+  it('returns display name of context components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.context'),
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        _context: {},
+      })
+    ).toBe('???.Consumer');
+
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.provider'),
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        _context: {},
+      })
+    ).toBe('???.Provider');
+  });
+
+  it('returns display name of named exotic components', () => {
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.context'),
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        _context: {
+          displayName: 'NamedContext',
+        },
+      })
+    ).toBe('NamedContext.Consumer');
+
+    expect(
+      getDisplayName({
+        $$typeof: Symbol.for('react.provider'),
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        _context: {
+          displayName: 'NamedContext',
+        },
+      })
+    ).toBe('NamedContext.Provider');
   });
 
   it('returns default fallback of anonymous components', () => {
