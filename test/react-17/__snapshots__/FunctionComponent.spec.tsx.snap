@@ -16,13 +16,19 @@ exports[`Empty matches snapshot 1`] = `<Empty />`;
 exports[`List matches snapshot 1`] = `
 <List>
   <ul>
-    <ListItem>
+    <ListItem
+      key="0"
+    >
       A
     </ListItem>
-    <ListItem>
+    <ListItem
+      key="1"
+    >
       B
     </ListItem>
-    <ListItem>
+    <ListItem
+      key="2"
+    >
       C
     </ListItem>
   </ul>
@@ -119,25 +125,41 @@ exports[`Table matches snapshot 1`] = `
       </TableRow>
     </TableFoot>
     <TableBody>
-      <TableRow>
-        <TableCell>
+      <TableRow
+        key="0"
+      >
+        <TableCell
+          key="0"
+        >
           A
         </TableCell>
-        <TableCell>
+        <TableCell
+          key="1"
+        >
           B
         </TableCell>
-        <TableCell>
+        <TableCell
+          key="2"
+        >
           C
         </TableCell>
       </TableRow>
-      <TableRow>
-        <TableCell>
+      <TableRow
+        key="1"
+      >
+        <TableCell
+          key="0"
+        >
           X
         </TableCell>
-        <TableCell>
+        <TableCell
+          key="1"
+        >
           Y
         </TableCell>
-        <TableCell>
+        <TableCell
+          key="2"
+        >
           Z
         </TableCell>
       </TableRow>
