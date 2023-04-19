@@ -6,6 +6,10 @@ import { Modal } from './Portal';
 jest.mock('react-dom');
 
 describe('Modal', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+  
   it('matches snapshot', () => {
     expect(
       shallowJSON(create(<Modal>This is a modal</Modal>).toTree())

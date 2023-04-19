@@ -3,67 +3,32 @@
 exports[`Button matches snapshot 1`] = `
 <Button
   onClick={[MockFunction]}
->
-  <button
-    onClick={[MockFunction]}
-    type="button"
-  />
-</Button>
+/>
 `;
 
 exports[`Empty matches snapshot 1`] = `<Empty />`;
 
 exports[`List matches snapshot 1`] = `
 <List>
-  <ul>
-    <ListItem
-      key="0"
-    >
-      A
-    </ListItem>
-    <ListItem
-      key="1"
-    >
-      B
-    </ListItem>
-    <ListItem
-      key="2"
-    >
-      C
-    </ListItem>
-  </ul>
+  <ListItem
+    key="0"
+  >
+    A
+  </ListItem>
+  <ListItem
+    key="1"
+  >
+    B
+  </ListItem>
+  <ListItem
+    key="2"
+  >
+    C
+  </ListItem>
 </List>
 `;
 
-exports[`MyComponent matches snapshot 1`] = `
-<MyComponent>
-  <div>
-    <Empty />
-    <SubComponent />
-    <SubComponent>
-      <span>
-        Sub host
-      </span>
-      <SubComponent>
-        <span>
-          Sub sub host
-        </span>
-      </SubComponent>
-      <div>
-        condition
-      </div>
-    </SubComponent>
-    <SubComponent>
-      <SubComponent />
-    </SubComponent>
-    <p
-      className="my"
-    >
-      Hello
-    </p>
-  </div>
-</MyComponent>
-`;
+exports[`MyComponent matches snapshot 1`] = `<MyComponent />`;
 
 exports[`MyComponent matches snapshot 2 level deep 1`] = `
 <MyComponent>
@@ -97,73 +62,71 @@ exports[`MyComponent matches snapshot 2 level deep 1`] = `
 
 exports[`Table matches snapshot 1`] = `
 <Table>
-  <table>
-    <TableHead>
-      <TableRow>
-        <TableHeadCell>
-          Head A
-        </TableHeadCell>
-        <TableHeadCell>
-          Head B
-        </TableHeadCell>
-        <TableHeadCell>
-          Head C
-        </TableHeadCell>
-      </TableRow>
-    </TableHead>
-    <TableFoot>
-      <TableRow>
-        <TableCell>
-          Foot A
-        </TableCell>
-        <TableCell>
-          Foot B
-        </TableCell>
-        <TableCell>
-          Foot C
-        </TableCell>
-      </TableRow>
-    </TableFoot>
-    <TableBody>
-      <TableRow
+  <TableHead>
+    <TableRow>
+      <TableHeadCell>
+        Head A
+      </TableHeadCell>
+      <TableHeadCell>
+        Head B
+      </TableHeadCell>
+      <TableHeadCell>
+        Head C
+      </TableHeadCell>
+    </TableRow>
+  </TableHead>
+  <TableFoot>
+    <TableRow>
+      <TableCell>
+        Foot A
+      </TableCell>
+      <TableCell>
+        Foot B
+      </TableCell>
+      <TableCell>
+        Foot C
+      </TableCell>
+    </TableRow>
+  </TableFoot>
+  <TableBody>
+    <TableRow
+      key="0"
+    >
+      <TableCell
         key="0"
       >
-        <TableCell
-          key="0"
-        >
-          A
-        </TableCell>
-        <TableCell
-          key="1"
-        >
-          B
-        </TableCell>
-        <TableCell
-          key="2"
-        >
-          C
-        </TableCell>
-      </TableRow>
-      <TableRow
+        A
+      </TableCell>
+      <TableCell
         key="1"
       >
-        <TableCell
-          key="0"
-        >
-          X
-        </TableCell>
-        <TableCell
-          key="1"
-        >
-          Y
-        </TableCell>
-        <TableCell
-          key="2"
-        >
-          Z
-        </TableCell>
-      </TableRow>
-    </TableBody>
-  </table>
+        B
+      </TableCell>
+      <TableCell
+        key="2"
+      >
+        C
+      </TableCell>
+    </TableRow>
+    <TableRow
+      key="1"
+    >
+      <TableCell
+        key="0"
+      >
+        X
+      </TableCell>
+      <TableCell
+        key="1"
+      >
+        Y
+      </TableCell>
+      <TableCell
+        key="2"
+      >
+        Z
+      </TableCell>
+    </TableRow>
+  </TableBody>
 </Table>
 `;

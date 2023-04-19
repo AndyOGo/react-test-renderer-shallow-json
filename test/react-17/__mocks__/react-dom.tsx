@@ -7,7 +7,7 @@ const originalModule = jest.requireActual('react-dom');
 module.exports = {
   ...originalModule,
   createPortal: (children: ReactNode) => {
-    return <div date-fake-portal-container>{children}</div>;
+    return <div data-fake-portal-container>{children}</div>;
   },
 };
 

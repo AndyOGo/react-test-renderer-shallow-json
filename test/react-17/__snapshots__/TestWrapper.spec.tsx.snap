@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestWrapper matches snapshot with depth of 1 1`] = `
+<TestWrapper>
+  <div
+    data-children={true}
+  >
+    Children
+  </div>
+</TestWrapper>
+`;
+
+exports[`TestWrapper matches snapshot with depth of 2 1`] = `
+<TestWrapper>
+  <div
+    data-rendered={true}
+  >
+    <div
+      data-children={true}
+    >
+      Children
+    </div>
+  </div>
+</TestWrapper>
+`;

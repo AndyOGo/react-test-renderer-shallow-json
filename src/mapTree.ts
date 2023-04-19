@@ -17,7 +17,8 @@ export function mapTree(
   const json = {
     type: getDisplayName(tree.type),
     props: mapProps(tree.props),
-    children: depth ? mapTrees(tree.rendered, depth) : mapChildren(tree.props),
+    children:
+      depth > 0 ? mapTrees(tree.rendered, depth) : mapChildren(tree.props),
   };
 
   return withReactTestSymbol(json) as ReactTestRendererNode;

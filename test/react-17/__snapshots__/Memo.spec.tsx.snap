@@ -3,23 +3,13 @@
 exports[`Button matches named snapshot 1`] = `
 <ButtonDisplayName
   onClick={[MockFunction]}
->
-  <button
-    onClick={[MockFunction]}
-    type="button"
-  />
-</ButtonDisplayName>
+/>
 `;
 
 exports[`Button matches snapshot 1`] = `
 <ButtonDisplayName
   onClick={[MockFunction]}
->
-  <button
-    onClick={[MockFunction]}
-    type="button"
-  />
-</ButtonDisplayName>
+/>
 `;
 
 exports[`Empty matches named snapshot 1`] = `<EmptyDisplayName />`;
@@ -28,190 +18,182 @@ exports[`Empty matches snapshot 1`] = `<EmptyDisplayName />`;
 
 exports[`List matches named snapshot 1`] = `
 <ListDisplayName>
-  <ul>
-    <ListItemDisplayName
-      key="0"
-    >
-      A
-    </ListItemDisplayName>
-    <ListItemDisplayName
-      key="1"
-    >
-      B
-    </ListItemDisplayName>
-    <ListItemDisplayName
-      key="2"
-    >
-      C
-    </ListItemDisplayName>
-  </ul>
+  <ListItemDisplayName
+    key="0"
+  >
+    A
+  </ListItemDisplayName>
+  <ListItemDisplayName
+    key="1"
+  >
+    B
+  </ListItemDisplayName>
+  <ListItemDisplayName
+    key="2"
+  >
+    C
+  </ListItemDisplayName>
 </ListDisplayName>
 `;
 
 exports[`List matches snapshot 1`] = `
 <ListDisplayName>
-  <ul>
-    <MemoListItemDisplayName
-      key="0"
-    >
-      A
-    </MemoListItemDisplayName>
-    <MemoListItemDisplayName
-      key="1"
-    >
-      B
-    </MemoListItemDisplayName>
-    <MemoListItemDisplayName
-      key="2"
-    >
-      C
-    </MemoListItemDisplayName>
-  </ul>
+  <MemoListItemDisplayName
+    key="0"
+  >
+    A
+  </MemoListItemDisplayName>
+  <MemoListItemDisplayName
+    key="1"
+  >
+    B
+  </MemoListItemDisplayName>
+  <MemoListItemDisplayName
+    key="2"
+  >
+    C
+  </MemoListItemDisplayName>
 </ListDisplayName>
 `;
 
 exports[`Table matches named snapshot 1`] = `
 <TableDisplayName>
-  <table>
-    <TableHeadDisplayName>
-      <TableRowDisplayName>
-        <TableHeadCellDisplayName>
-          Head A
-        </TableHeadCellDisplayName>
-        <TableHeadCellDisplayName>
-          Head B
-        </TableHeadCellDisplayName>
-        <TableHeadCellDisplayName>
-          Head C
-        </TableHeadCellDisplayName>
-      </TableRowDisplayName>
-    </TableHeadDisplayName>
-    <TableFootDisplayName>
-      <TableRowDisplayName>
-        <TableCellDisplayName>
-          Foot A
-        </TableCellDisplayName>
-        <TableCellDisplayName>
-          Foot B
-        </TableCellDisplayName>
-        <TableCellDisplayName>
-          Foot C
-        </TableCellDisplayName>
-      </TableRowDisplayName>
-    </TableFootDisplayName>
-    <TableBodyDisplayName>
-      <TableRowDisplayName
+  <TableHeadDisplayName>
+    <TableRowDisplayName>
+      <TableHeadCellDisplayName>
+        Head A
+      </TableHeadCellDisplayName>
+      <TableHeadCellDisplayName>
+        Head B
+      </TableHeadCellDisplayName>
+      <TableHeadCellDisplayName>
+        Head C
+      </TableHeadCellDisplayName>
+    </TableRowDisplayName>
+  </TableHeadDisplayName>
+  <TableFootDisplayName>
+    <TableRowDisplayName>
+      <TableCellDisplayName>
+        Foot A
+      </TableCellDisplayName>
+      <TableCellDisplayName>
+        Foot B
+      </TableCellDisplayName>
+      <TableCellDisplayName>
+        Foot C
+      </TableCellDisplayName>
+    </TableRowDisplayName>
+  </TableFootDisplayName>
+  <TableBodyDisplayName>
+    <TableRowDisplayName
+      key="0"
+    >
+      <TableCellDisplayName
         key="0"
       >
-        <TableCellDisplayName
-          key="0"
-        >
-          A
-        </TableCellDisplayName>
-        <TableCellDisplayName
-          key="1"
-        >
-          B
-        </TableCellDisplayName>
-        <TableCellDisplayName
-          key="2"
-        >
-          C
-        </TableCellDisplayName>
-      </TableRowDisplayName>
-      <TableRowDisplayName
+        A
+      </TableCellDisplayName>
+      <TableCellDisplayName
         key="1"
       >
-        <TableCellDisplayName
-          key="0"
-        >
-          X
-        </TableCellDisplayName>
-        <TableCellDisplayName
-          key="1"
-        >
-          Y
-        </TableCellDisplayName>
-        <TableCellDisplayName
-          key="2"
-        >
-          Z
-        </TableCellDisplayName>
-      </TableRowDisplayName>
-    </TableBodyDisplayName>
-  </table>
+        B
+      </TableCellDisplayName>
+      <TableCellDisplayName
+        key="2"
+      >
+        C
+      </TableCellDisplayName>
+    </TableRowDisplayName>
+    <TableRowDisplayName
+      key="1"
+    >
+      <TableCellDisplayName
+        key="0"
+      >
+        X
+      </TableCellDisplayName>
+      <TableCellDisplayName
+        key="1"
+      >
+        Y
+      </TableCellDisplayName>
+      <TableCellDisplayName
+        key="2"
+      >
+        Z
+      </TableCellDisplayName>
+    </TableRowDisplayName>
+  </TableBodyDisplayName>
 </TableDisplayName>
 `;
 
 exports[`Table matches snapshot 1`] = `
 <TableDisplayName>
-  <table>
-    <MemoTableHeadDisplayName>
-      <MemoTableRowDisplayName>
-        <MemoTableHeadCellDisplayName>
-          Head A
-        </MemoTableHeadCellDisplayName>
-        <MemoTableHeadCellDisplayName>
-          Head B
-        </MemoTableHeadCellDisplayName>
-        <MemoTableHeadCellDisplayName>
-          Head C
-        </MemoTableHeadCellDisplayName>
-      </MemoTableRowDisplayName>
-    </MemoTableHeadDisplayName>
-    <MemoTableFootDisplayName>
-      <MemoTableRowDisplayName>
-        <MemoTableCellDisplayName>
-          Foot A
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
-          Foot B
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName>
-          Foot C
-        </MemoTableCellDisplayName>
-      </MemoTableRowDisplayName>
-    </MemoTableFootDisplayName>
-    <MemoTableBodyDisplayName>
-      <MemoTableRowDisplayName
+  <MemoTableHeadDisplayName>
+    <MemoTableRowDisplayName>
+      <MemoTableHeadCellDisplayName>
+        Head A
+      </MemoTableHeadCellDisplayName>
+      <MemoTableHeadCellDisplayName>
+        Head B
+      </MemoTableHeadCellDisplayName>
+      <MemoTableHeadCellDisplayName>
+        Head C
+      </MemoTableHeadCellDisplayName>
+    </MemoTableRowDisplayName>
+  </MemoTableHeadDisplayName>
+  <MemoTableFootDisplayName>
+    <MemoTableRowDisplayName>
+      <MemoTableCellDisplayName>
+        Foot A
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName>
+        Foot B
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName>
+        Foot C
+      </MemoTableCellDisplayName>
+    </MemoTableRowDisplayName>
+  </MemoTableFootDisplayName>
+  <MemoTableBodyDisplayName>
+    <MemoTableRowDisplayName
+      key="0"
+    >
+      <MemoTableCellDisplayName
         key="0"
       >
-        <MemoTableCellDisplayName
-          key="0"
-        >
-          A
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName
-          key="1"
-        >
-          B
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName
-          key="2"
-        >
-          C
-        </MemoTableCellDisplayName>
-      </MemoTableRowDisplayName>
-      <MemoTableRowDisplayName
+        A
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName
         key="1"
       >
-        <MemoTableCellDisplayName
-          key="0"
-        >
-          X
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName
-          key="1"
-        >
-          Y
-        </MemoTableCellDisplayName>
-        <MemoTableCellDisplayName
-          key="2"
-        >
-          Z
-        </MemoTableCellDisplayName>
-      </MemoTableRowDisplayName>
-    </MemoTableBodyDisplayName>
-  </table>
+        B
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName
+        key="2"
+      >
+        C
+      </MemoTableCellDisplayName>
+    </MemoTableRowDisplayName>
+    <MemoTableRowDisplayName
+      key="1"
+    >
+      <MemoTableCellDisplayName
+        key="0"
+      >
+        X
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName
+        key="1"
+      >
+        Y
+      </MemoTableCellDisplayName>
+      <MemoTableCellDisplayName
+        key="2"
+      >
+        Z
+      </MemoTableCellDisplayName>
+    </MemoTableRowDisplayName>
+  </MemoTableBodyDisplayName>
 </TableDisplayName>
 `;
