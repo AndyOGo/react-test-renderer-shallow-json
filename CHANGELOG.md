@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.3...v1.0.4) (2023-04-19)
+
+
+### Bug Fixes
+
+* call mapTrees directly by shallowJSON ([e95fffc](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/e95fffc2e401d4bb159661aa36e64213739b43ad))
+
 ## [1.0.3](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.2...v1.0.3) (2023-04-17)
 
 ## [1.0.2](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.1...v1.0.2) (2023-04-17)

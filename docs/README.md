@@ -27,4 +27,4 @@ react-test-renderer-shallow-json
 
 #### Defined in
 
-[shallowJSON.ts:9](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/b7ab7cc/src/shallowJSON.ts#L9)
+[shallowJSON.ts:5](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/4cccdd6/src/shallowJSON.ts#L5)
