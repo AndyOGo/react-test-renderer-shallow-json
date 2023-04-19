@@ -1,10 +1,6 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer';
 import { ReactTestRendererTreeFixed } from './types';
-import { getDisplayName } from './getDisplayName';
-import { mapProps } from './mapProps';
 import { mapTrees } from './mapTrees';
-import { dive } from './dive';
-import { withReactTestSymbol } from './withReactTestSymbol';
 
 export function shallowJSON(
   trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[],
@@ -14,28 +10,11 @@ export function shallowJSON(
     return null;
   }
 
-  if (Array.isArray(trees)) {
-    return trees.map((tree) => {
-      return mapShallowTree(tree, depth);
-    }) as unknown as ReactTestRendererJSON;
+  const nodes = mapTrees(trees, depth);
+
+  if (Array.isArray(nodes) && nodes.length === 1) {
+    return nodes[0] as unknown as ReactTestRendererJSON | null;
   }
 
-  return mapShallowTree(trees, depth);
-}
-
-function mapShallowTree(
-  tree: null | ReactTestRendererTreeFixed,
-  depth = 1
-): null | ReactTestRendererJSON {
-  if (!tree) {
-    return null;
-  }
-
-  const shallowJson: ReactTestRendererJSON = {
-    type: getDisplayName(tree.type),
-    props: mapProps(tree.props),
-    children: mapTrees(tree.rendered, dive(tree, depth)),
-  };
-
-  return withReactTestSymbol(shallowJson);
+  return nodes as unknown as ReactTestRendererJSON | null;
 }

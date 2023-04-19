@@ -3,39 +3,31 @@
 exports[`Fragment matches snapshot 1`] = `
 [
   <div />,
-  <TestWrapper>
-    <div />
-  </TestWrapper>,
+  <TestWrapper />,
 ]
 `;
 
 exports[`Fragment matches snapshot 2`] = `
 [
   <div />,
-  <TestWrapper>
-    <div />
-  </TestWrapper>,
+  <TestWrapper />,
 ]
 `;
 
 exports[`Fragment matches snapshot as children 1`] = `
 <TestWrapper>
-  <div>
-    <React.Fragment>
-      <div />
-      <TestWrapper />
-    </React.Fragment>
-  </div>
+  <React.Fragment>
+    <div />
+    <TestWrapper />
+  </React.Fragment>
 </TestWrapper>
 `;
 
 exports[`Fragment matches snapshot as children 2`] = `
 <TestWrapper>
-  <div>
-    <React.Fragment>
-      <div />
-      <TestWrapper />
-    </React.Fragment>
-  </div>
+  <React.Fragment>
+    <div />
+    <TestWrapper />
+  </React.Fragment>
 </TestWrapper>
 `;

@@ -12,11 +12,9 @@ exports[`HostComponent matches self-closing snapshot with key 1`] = `<div />`;
 
 exports[`HostComponent matches self-closing snapshot with key as children 1`] = `
 <TestWrapper>
-  <div>
-    <div
-      key="foo"
-    />
-  </div>
+  <div
+    key="foo"
+  />
 </TestWrapper>
 `;
 
@@ -37,15 +35,13 @@ exports[`HostComponent matches self-closing snapshot with ref 1`] = `<div />`;
 
 exports[`HostComponent matches self-closing snapshot with ref as children 1`] = `
 <TestWrapper>
-  <div>
-    <div
-      ref={
-        {
-          "current": null,
-        }
+  <div
+    ref={
+      {
+        "current": null,
       }
-    />
-  </div>
+    }
+  />
 </TestWrapper>
 `;
 
