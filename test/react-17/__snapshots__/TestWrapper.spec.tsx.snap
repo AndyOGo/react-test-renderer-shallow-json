@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TestWrapper matches snapshot with depth of 1 1`] = `
+exports[`TestWrapper matches snapshot at depth of 1 1`] = `
 <TestWrapper>
   <div
     data-children={true}
@@ -10,7 +10,7 @@ exports[`TestWrapper matches snapshot with depth of 1 1`] = `
 </TestWrapper>
 `;
 
-exports[`TestWrapper matches snapshot with depth of 2 1`] = `
+exports[`TestWrapper matches snapshot at depth of 2 1`] = `
 <TestWrapper>
   <div
     data-rendered={true}
@@ -20,6 +20,33 @@ exports[`TestWrapper matches snapshot with depth of 2 1`] = `
     >
       Children
     </div>
+  </div>
+</TestWrapper>
+`;
+
+exports[`TestWrapper matches snapshot with an array of children at depth of 1 1`] = `
+<TestWrapper>
+  TEXT_NODE
+  <div
+    data-children={true}
+    key="div"
+  />
+  <TestWrapper
+    key="test"
+  />
+</TestWrapper>
+`;
+
+exports[`TestWrapper matches snapshot with an array of children at depth of 2 1`] = `
+<TestWrapper>
+  <div
+    data-rendered={true}
+  >
+    TEXT_NODE
+    <div
+      data-children={true}
+    />
+    <TestWrapper />
   </div>
 </TestWrapper>
 `;
