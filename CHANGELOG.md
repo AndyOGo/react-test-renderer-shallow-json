@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.4...v1.0.5) (2023-04-20)
+
+
+### Bug Fixes
+
+* flatten nested children ([db51739](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/db51739001a1a844408ca37519625c43aea01bb7))
+
 ## [1.0.4](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.3...v1.0.4) (2023-04-19)
 
 

@@ -14,6 +14,11 @@ react-test-renderer-shallow-json
 
 ▸ **shallowJSON**(`trees`, `depth?`): ``null`` \| `ReactTestRendererJSON`
 
+Return an object representing the rendered tree.
+This tree contains the platform-specific nodes like `<div>` or `<View>` and includes the user-written components as well.
+User-written components are rendered recursively up to the specified `depth`.
+This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest).
+
 #### Parameters
 
 | Name | Type | Default value |
@@ -27,4 +32,4 @@ react-test-renderer-shallow-json
 
 #### Defined in
 
-[shallowJSON.ts:5](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/4cccdd6/src/shallowJSON.ts#L5)
+[shallowJSON.ts:11](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/a5b75eb/src/shallowJSON.ts#L11)
