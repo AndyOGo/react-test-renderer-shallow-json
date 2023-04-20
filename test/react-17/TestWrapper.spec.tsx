@@ -36,4 +36,25 @@ describe('TestWrapper', () => {
       ).toMatchSnapshot();
     }
   );
+
+  it.each<number>([1, 2])(
+    'matches snapshot with a nested array of children at depth of %s',
+    (depth) => {
+      expect(
+        shallowJSON(
+          create(
+            <TestWrapper>
+              <div />
+              {[
+                'TEXT_NODE',
+                <div data-children key="div" />,
+                <TestWrapper key="test" />,
+              ]}
+            </TestWrapper>
+          ).toTree(),
+          depth
+        )
+      ).toMatchSnapshot();
+    }
+  );
 });

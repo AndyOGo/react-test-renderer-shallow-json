@@ -24,6 +24,35 @@ exports[`TestWrapper matches snapshot at depth of 2 1`] = `
 </TestWrapper>
 `;
 
+exports[`TestWrapper matches snapshot with a nested array of children at depth of 1 1`] = `
+<TestWrapper>
+  <div />
+  TEXT_NODE
+  <div
+    data-children={true}
+    key="div"
+  />
+  <TestWrapper
+    key="test"
+  />
+</TestWrapper>
+`;
+
+exports[`TestWrapper matches snapshot with a nested array of children at depth of 2 1`] = `
+<TestWrapper>
+  <div
+    data-rendered={true}
+  >
+    <div />
+    TEXT_NODE
+    <div
+      data-children={true}
+    />
+    <TestWrapper />
+  </div>
+</TestWrapper>
+`;
+
 exports[`TestWrapper matches snapshot with an array of children at depth of 1 1`] = `
 <TestWrapper>
   TEXT_NODE
