@@ -17,5 +17,5 @@ export function mapChildren(
     return [mapChild(children)];
   }
 
-  return children.map(mapChild);
+  return children.flat().map(mapChild);
 }
