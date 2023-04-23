@@ -7,18 +7,7 @@ import type {
   Key,
   LegacyRef,
 } from 'react';
-import type {
-  ReactTestRendererJSON,
-  ReactTestRendererTree,
-} from 'react-test-renderer';
-
-export type ReactTestRendererJSONFixed = Omit<
-  ReactTestRendererJSON,
-  'children'
-> & {
-  children: null | ReactTestRendererJSONFixed | ReactTestRendererNodeFixed[];
-};
-export type ReactTestRendererNodeFixed = ReactTestRendererJSONFixed | string;
+import type { ReactTestRendererTree } from 'react-test-renderer';
 
 type NamedExoticComponentFixed = Pick<
   NamedExoticComponent,
