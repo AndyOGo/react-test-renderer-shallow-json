@@ -68,9 +68,6 @@ export function getDisplayName(
   }
 
   if (isNamedExoticComponentType(type)) {
-    if (type.$$typeof === Symbol.for('react.forward_ref')) {
-      console.log(type);
-    }
     return (
       type.displayName ||
       prependSymbol(
