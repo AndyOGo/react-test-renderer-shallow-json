@@ -1,4 +1,4 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer';
+import type { ReactTestRendererNode } from 'react-test-renderer';
 import { ReactTestRendererTreeFixed } from './types';
 import { mapTrees } from './mapTrees';
 
@@ -11,7 +11,7 @@ import { mapTrees } from './mapTrees';
 export function shallowJSON(
   trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[],
   depth = 1
-): null | ReactTestRendererJSON {
+): null | ReactTestRendererNode | ReactTestRendererNode[] {
   if (!trees) {
     return null;
   }
@@ -19,8 +19,8 @@ export function shallowJSON(
   const nodes = mapTrees(trees, depth);
 
   if (Array.isArray(nodes) && nodes.length === 1) {
-    return nodes[0] as unknown as ReactTestRendererJSON | null;
+    return nodes[0];
   }
 
-  return nodes as unknown as ReactTestRendererJSON | null;
+  return nodes;
 }
