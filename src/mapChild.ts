@@ -1,14 +1,12 @@
-import type {
-  ReactTestRendererNodeFixed,
-  ReactTestRendererTreeChild,
-} from './types';
+import type { ReactTestRendererNode } from 'react-test-renderer';
+import type { ReactTestRendererTreeChild } from './types';
 import { getDisplayName } from './getDisplayName';
 import { mapProps } from './mapProps';
 import { mapChildren } from './mapChildren';
 
 export function mapChild(
   child: ReactTestRendererTreeChild
-): ReactTestRendererNodeFixed {
+): ReactTestRendererNode {
   if (typeof child === 'string') {
     return child;
   }
