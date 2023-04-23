@@ -1,4 +1,4 @@
-import type { ReactTestRendererJSON } from 'react-test-renderer';
+import type { ReactTestRendererNode } from 'react-test-renderer';
 import { ReactTestRendererTreeFixed } from './types';
 /**
  * Return an object representing the rendered tree.
@@ -6,4 +6,4 @@ import { ReactTestRendererTreeFixed } from './types';
  * User-written components are rendered recursively up to the specified `depth`.
  * This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest).
  */
-export declare function shallowJSON(trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[], depth?: number): null | ReactTestRendererJSON;
+export declare function shallowJSON(trees: null | ReactTestRendererTreeFixed | ReactTestRendererTreeFixed[], depth?: number): null | ReactTestRendererNode | ReactTestRendererNode[];

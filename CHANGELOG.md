@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.5...v1.0.6) (2023-04-23)
+
+
+### Bug Fixes
+
+* remove console log ([410f63c](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/410f63c88bd5499e0b1b74b96f25c22b1fdcf075))
+* remove custom JSON childrens type ([68d1d5c](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/68d1d5c6d7ea86c3d25d7eb320096cc64adeff2f))
+* shallowJSON return type may be an array ([261343b](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/261343b0dd94afcb7cbcc15e86b0e2e1091a1c72))
+
 ## [1.0.5](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.4...v1.0.5) (2023-04-20)
 
 

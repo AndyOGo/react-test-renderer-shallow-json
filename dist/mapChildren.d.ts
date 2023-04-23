@@ -1,2 +1,3 @@
-import type { ReactTestRendererJSONFixed, ReactTestRendererTreeFixed } from './types';
-export declare function mapChildren(props: ReactTestRendererTreeFixed['props']): ReactTestRendererJSONFixed['children'];
+import type { ReactTestRendererJSON } from 'react-test-renderer';
+import type { ReactTestRendererTreeFixed } from './types';
+export declare function mapChildren(props: ReactTestRendererTreeFixed['props']): ReactTestRendererJSON['children'];
