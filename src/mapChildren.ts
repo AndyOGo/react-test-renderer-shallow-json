@@ -7,8 +7,8 @@ export function mapChildren(
 ): ReactTestRendererJSON['children'] {
   const { children } = props;
 
-  if (!children) {
-    return null;
+  if (children == null) {
+    return children as any;
   }
 
   if (!Array.isArray(children)) {

@@ -126,7 +126,7 @@ describe('mapTree', () => {
     ).toEqual({
       type: 'div',
       props: {},
-      children: null,
+      children: undefined,
     });
   });
 });

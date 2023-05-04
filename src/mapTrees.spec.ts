@@ -87,7 +87,7 @@ describe('mapTrees', () => {
       {
         type: 'FakeFunctionComponent',
         props: {},
-        children: null,
+        children: undefined,
       },
     ]);
   });
@@ -112,7 +112,7 @@ describe('mapTrees', () => {
       {
         type: 'FakeClassComponent',
         props: {},
-        children: null,
+        children: undefined,
       },
     ]);
   });

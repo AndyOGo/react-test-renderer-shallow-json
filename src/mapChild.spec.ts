@@ -3,9 +3,12 @@ import { FakeFunctionComponent, FakeClassComponent } from './test-utils';
 import { mapChild } from './mapChild';
 
 describe('mapChild', () => {
-  it('returns text nodes', () => {
-    expect(mapChild('foo bar')).toBe('foo bar');
-  });
+  it.each([null, undefined, true, false, 0, 1, '', 'foo'])(
+    'returns primitive of %s',
+    (primitive) => {
+      expect(mapChild(primitive)).toBe(primitive);
+    }
+  );
 
   it('returns host component', () => {
     expect(
@@ -17,7 +20,7 @@ describe('mapChild', () => {
     ).toEqual({
       type: 'div',
       props: {},
-      children: null,
+      children: undefined,
     });
   });
 
@@ -31,7 +34,7 @@ describe('mapChild', () => {
     ).toEqual({
       type: 'FakeFunctionComponent',
       props: {},
-      children: null,
+      children: undefined,
     });
   });
 
@@ -45,7 +48,7 @@ describe('mapChild', () => {
     ).toEqual({
       type: 'FakeClassComponent',
       props: {},
-      children: null,
+      children: undefined,
     });
   });
 

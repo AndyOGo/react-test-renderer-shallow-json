@@ -2,12 +2,13 @@ import type { ReactTestRendererTreeFixed } from './types';
 import { mapChildren } from './mapChildren';
 
 describe('mapChildren', () => {
-  it.each<ReactTestRendererTreeFixed['props']>([{}, { children: undefined }])(
-    'return null if undefined',
-    (props) => {
-      expect(mapChildren(props)).toBe(null);
-    }
-  );
+  it.each<ReactTestRendererTreeFixed['props']>([
+    {},
+    { children: undefined },
+    { children: null },
+  ])('return nullish', (props) => {
+    expect(mapChildren(props)).toBe(props?.children);
+  });
 
   it('returns one child', () => {
     expect(mapChildren({ children: 'div' })).toEqual(['div']);
