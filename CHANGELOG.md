@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.1...v1.1.2) (2023-06-22)
+
+
+### Bug Fixes
+
+* children maybe any primitive ([18f145d](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/18f145d693fe17e9b9d7afdac6967b6025355120))
+
 ## [1.1.1](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.0...v1.1.1) (2023-06-22)
 
 # [1.1.0](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.6...v1.1.0) (2023-06-22)

@@ -22,7 +22,7 @@ type ReactTestRendererTreeProps = {
     [propName: string]: unknown;
 };
 type ReactTestRendererTreeChildren = ReactTestRendererTreeChild | ReactTestRendererTreeChild[];
-export type ReactTestRendererTreeChild = string | {
+export type ReactTestRendererTreeChild = string | number | boolean | undefined | null | {
     props: ReactTestRendererTreeProps;
     type: string | ElementType;
     key: null | Key;

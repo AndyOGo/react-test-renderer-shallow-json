@@ -32,4 +32,4 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 
 #### Defined in
 
-[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/0dbe6a5/src/shallowJSON.ts#L25)
+[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/d465bf4/src/shallowJSON.ts#L25)
