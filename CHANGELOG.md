@@ -1,3 +1,5 @@
+## [1.1.1](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.0...v1.1.1) (2023-06-22)
+
 # [1.1.0](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.6...v1.1.0) (2023-06-22)
 
 
