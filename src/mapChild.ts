@@ -7,8 +7,8 @@ import { mapChildren } from './mapChildren';
 export function mapChild(
   child: ReactTestRendererTreeChild
 ): ReactTestRendererNode {
-  if (typeof child === 'string') {
-    return child;
+  if (typeof child !== 'object' || child == null) {
+    return child as unknown as ReactTestRendererNode;
   }
 
   const { key, ref } = child;

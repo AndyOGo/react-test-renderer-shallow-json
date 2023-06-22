@@ -71,6 +71,10 @@ type ReactTestRendererTreeChildren =
 
 export type ReactTestRendererTreeChild =
   | string
+  | number
+  | boolean
+  | undefined
+  | null
   | {
       props: ReactTestRendererTreeProps;
       type: string | ElementType;

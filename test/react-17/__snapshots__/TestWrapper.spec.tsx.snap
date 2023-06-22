@@ -20,7 +20,7 @@ exports[`TestWrapper matches snapshot at depth of 2 1`] = `
 </div>
 `;
 
-exports[`TestWrapper matches snapshot with a nested array of children at depth of 1 1`] = `
+exports[`TestWrapper matches snapshot with a adjacent array of children at depth of 1 1`] = `
 [
   <div />,
   "TEXT_NODE",
@@ -34,7 +34,7 @@ exports[`TestWrapper matches snapshot with a nested array of children at depth o
 ]
 `;
 
-exports[`TestWrapper matches snapshot with a nested array of children at depth of 2 1`] = `
+exports[`TestWrapper matches snapshot with a adjacent array of children at depth of 2 1`] = `
 <div
   data-rendered={true}
 >
@@ -70,4 +70,200 @@ exports[`TestWrapper matches snapshot with an array of children at depth of 2 1`
   />
   <TestWrapper />
 </div>
+`;
+
+exports[`TestWrapper primitive of  matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  "",
+]
+`;
+
+exports[`TestWrapper primitive of  matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+  
+</div>
+`;
+
+exports[`TestWrapper primitive of  matches snapshot at depth of 1 1`] = `""`;
+
+exports[`TestWrapper primitive of  matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  
+</div>
+`;
+
+exports[`TestWrapper primitive of 0 matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  0,
+]
+`;
+
+exports[`TestWrapper primitive of 0 matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+  0
+</div>
+`;
+
+exports[`TestWrapper primitive of 0 matches snapshot at depth of 1 1`] = `0`;
+
+exports[`TestWrapper primitive of 0 matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  0
+</div>
+`;
+
+exports[`TestWrapper primitive of 1 matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  1,
+]
+`;
+
+exports[`TestWrapper primitive of 1 matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+  1
+</div>
+`;
+
+exports[`TestWrapper primitive of 1 matches snapshot at depth of 1 1`] = `1`;
+
+exports[`TestWrapper primitive of 1 matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  1
+</div>
+`;
+
+exports[`TestWrapper primitive of false matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  false,
+]
+`;
+
+exports[`TestWrapper primitive of false matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+</div>
+`;
+
+exports[`TestWrapper primitive of false matches snapshot at depth of 1 1`] = `false`;
+
+exports[`TestWrapper primitive of false matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+/>
+`;
+
+exports[`TestWrapper primitive of foo matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  "foo",
+]
+`;
+
+exports[`TestWrapper primitive of foo matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+  foo
+</div>
+`;
+
+exports[`TestWrapper primitive of foo matches snapshot at depth of 1 1`] = `"foo"`;
+
+exports[`TestWrapper primitive of foo matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  foo
+</div>
+`;
+
+exports[`TestWrapper primitive of null matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  null,
+]
+`;
+
+exports[`TestWrapper primitive of null matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+</div>
+`;
+
+exports[`TestWrapper primitive of null matches snapshot at depth of 1 1`] = `[]`;
+
+exports[`TestWrapper primitive of null matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+/>
+`;
+
+exports[`TestWrapper primitive of true matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  true,
+]
+`;
+
+exports[`TestWrapper primitive of true matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+</div>
+`;
+
+exports[`TestWrapper primitive of true matches snapshot at depth of 1 1`] = `true`;
+
+exports[`TestWrapper primitive of true matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+/>
+`;
+
+exports[`TestWrapper primitive of undefined matches snapshot adjacently at depth of 1 1`] = `
+[
+  <div />,
+  undefined,
+]
+`;
+
+exports[`TestWrapper primitive of undefined matches snapshot adjacently at depth of 2 1`] = `
+<div
+  data-rendered={true}
+>
+  <div />
+</div>
+`;
+
+exports[`TestWrapper primitive of undefined matches snapshot at depth of 1 1`] = `[]`;
+
+exports[`TestWrapper primitive of undefined matches snapshot at depth of 2 1`] = `
+<div
+  data-rendered={true}
+/>
 `;

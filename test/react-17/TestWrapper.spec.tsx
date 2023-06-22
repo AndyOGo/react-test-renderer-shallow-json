@@ -17,6 +17,36 @@ describe('TestWrapper', () => {
     ).toMatchSnapshot();
   });
 
+  describe.each([null, undefined, true, false, 0, 1, '', 'foo'])(
+    'primitive of %s',
+    (primitive) => {
+      it.each<number>([1, 2])('matches snapshot at depth of %s', (depth) => {
+        expect(
+          shallowJSON(create(<TestWrapper>{primitive}</TestWrapper>).toTree(), {
+            depth,
+          })
+        ).toMatchSnapshot();
+      });
+
+      it.each<number>([1, 2])(
+        'matches snapshot adjacently at depth of %s',
+        (depth) => {
+          expect(
+            shallowJSON(
+              create(
+                <TestWrapper>
+                  <div />
+                  {primitive}
+                </TestWrapper>
+              ).toTree(),
+              { depth }
+            )
+          ).toMatchSnapshot();
+        }
+      );
+    }
+  );
+
   it.each<number>([1, 2])(
     'matches snapshot with an array of children at depth of %s',
     (depth) => {
@@ -38,7 +68,7 @@ describe('TestWrapper', () => {
   );
 
   it.each<number>([1, 2])(
-    'matches snapshot with a nested array of children at depth of %s',
+    'matches snapshot with a adjacent array of children at depth of %s',
     (depth) => {
       expect(
         shallowJSON(
