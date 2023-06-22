@@ -40,7 +40,9 @@ export function shallowJSON(
         .filter<ReactTestRendererJSON>(isReactTestRendererJSON)
         .flatMap((node) => (node.children ? node.children : []));
     } else {
-      nodes = nodes && (nodes as ReactTestRendererJSON).children;
+      nodes = isReactTestRendererJSON(nodes)
+        ? (nodes as ReactTestRendererJSON).children
+        : null;
     }
   }
 
