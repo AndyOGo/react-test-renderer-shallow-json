@@ -1,63 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button matches named snapshot 1`] = `
-<ButtonDisplayName
-  onClick={[MockFunction]}
-/>
-`;
+exports[`Button matches named snapshot 1`] = `[]`;
 
-exports[`Button matches snapshot 1`] = `
-<ButtonDisplayName
-  onClick={[MockFunction]}
-/>
-`;
+exports[`Button matches snapshot 1`] = `[]`;
 
-exports[`Empty matches named snapshot 1`] = `<EmptyDisplayName />`;
+exports[`Empty matches named snapshot 1`] = `[]`;
 
-exports[`Empty matches snapshot 1`] = `<EmptyDisplayName />`;
+exports[`Empty matches snapshot 1`] = `[]`;
 
 exports[`List matches named snapshot 1`] = `
-<ListDisplayName>
+[
   <ListItemDisplayName
     key="0"
   >
     A
-  </ListItemDisplayName>
+  </ListItemDisplayName>,
   <ListItemDisplayName
     key="1"
   >
     B
-  </ListItemDisplayName>
+  </ListItemDisplayName>,
   <ListItemDisplayName
     key="2"
   >
     C
-  </ListItemDisplayName>
-</ListDisplayName>
+  </ListItemDisplayName>,
+]
 `;
 
 exports[`List matches snapshot 1`] = `
-<ListDisplayName>
+[
   <MemoListItemDisplayName
     key="0"
   >
     A
-  </MemoListItemDisplayName>
+  </MemoListItemDisplayName>,
   <MemoListItemDisplayName
     key="1"
   >
     B
-  </MemoListItemDisplayName>
+  </MemoListItemDisplayName>,
   <MemoListItemDisplayName
     key="2"
   >
     C
-  </MemoListItemDisplayName>
-</ListDisplayName>
+  </MemoListItemDisplayName>,
+]
 `;
 
 exports[`Table matches named snapshot 1`] = `
-<TableDisplayName>
+[
   <TableHeadDisplayName>
     <TableRowDisplayName>
       <TableHeadCellDisplayName>
@@ -70,7 +62,7 @@ exports[`Table matches named snapshot 1`] = `
         Head C
       </TableHeadCellDisplayName>
     </TableRowDisplayName>
-  </TableHeadDisplayName>
+  </TableHeadDisplayName>,
   <TableFootDisplayName>
     <TableRowDisplayName>
       <TableCellDisplayName>
@@ -83,7 +75,7 @@ exports[`Table matches named snapshot 1`] = `
         Foot C
       </TableCellDisplayName>
     </TableRowDisplayName>
-  </TableFootDisplayName>
+  </TableFootDisplayName>,
   <TableBodyDisplayName>
     <TableRowDisplayName
       key="0"
@@ -123,12 +115,12 @@ exports[`Table matches named snapshot 1`] = `
         Z
       </TableCellDisplayName>
     </TableRowDisplayName>
-  </TableBodyDisplayName>
-</TableDisplayName>
+  </TableBodyDisplayName>,
+]
 `;
 
 exports[`Table matches snapshot 1`] = `
-<TableDisplayName>
+[
   <MemoTableHeadDisplayName>
     <MemoTableRowDisplayName>
       <MemoTableHeadCellDisplayName>
@@ -141,7 +133,7 @@ exports[`Table matches snapshot 1`] = `
         Head C
       </MemoTableHeadCellDisplayName>
     </MemoTableRowDisplayName>
-  </MemoTableHeadDisplayName>
+  </MemoTableHeadDisplayName>,
   <MemoTableFootDisplayName>
     <MemoTableRowDisplayName>
       <MemoTableCellDisplayName>
@@ -154,7 +146,7 @@ exports[`Table matches snapshot 1`] = `
         Foot C
       </MemoTableCellDisplayName>
     </MemoTableRowDisplayName>
-  </MemoTableFootDisplayName>
+  </MemoTableFootDisplayName>,
   <MemoTableBodyDisplayName>
     <MemoTableRowDisplayName
       key="0"
@@ -194,6 +186,6 @@ exports[`Table matches snapshot 1`] = `
         Z
       </MemoTableCellDisplayName>
     </MemoTableRowDisplayName>
-  </MemoTableBodyDisplayName>
-</TableDisplayName>
+  </MemoTableBodyDisplayName>,
+]
 `;

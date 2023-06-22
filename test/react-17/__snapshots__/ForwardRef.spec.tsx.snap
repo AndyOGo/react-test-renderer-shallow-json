@@ -1,51 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FancyDiv matches snapshot 1`] = `<div />`;
+exports[`FancyDiv matches snapshot 1`] = `[]`;
 
 exports[`FancyDiv matches snapshot as children 1`] = `
-<TestWrapper>
-  <ForwardRefFancyDivInner
-    ref={
-      {
-        "current": null,
-      }
+<ForwardRefFancyDivInner
+  ref={
+    {
+      "current": null,
     }
-  />
-</TestWrapper>
+  }
+/>
 `;
 
-exports[`FancyDivArrow matches snapshot 1`] = `<div />`;
+exports[`FancyDivArrow matches snapshot 1`] = `[]`;
 
 exports[`FancyDivArrow matches snapshot as children 1`] = `
-<TestWrapper>
-  <ForwardRef
-    ref={
-      {
-        "current": null,
-      }
+<ForwardRef
+  ref={
+    {
+      "current": null,
     }
-  />
-</TestWrapper>
+  }
+/>
 `;
 
-exports[`FancyDivNamed matches snapshot 1`] = `<div />`;
+exports[`FancyDivNamed matches snapshot 1`] = `[]`;
 
 exports[`FancyDivNamed matches snapshot as children 1`] = `
-<TestWrapper>
-  <FancyDivDisplayName
-    ref={
-      {
-        "current": null,
-      }
+<FancyDivDisplayName
+  ref={
+    {
+      "current": null,
     }
-  />
-</TestWrapper>
+  }
+/>
 `;
 
-exports[`TestRef matches snapshot 1`] = `<TestRef />`;
+exports[`TestRef matches snapshot 1`] = `[]`;
 
-exports[`TestRef matches snapshot as children 1`] = `
-<TestWrapper>
-  <TestRef />
-</TestWrapper>
-`;
+exports[`TestRef matches snapshot as children 1`] = `<TestRef />`;

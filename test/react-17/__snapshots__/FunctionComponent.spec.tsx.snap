@@ -1,67 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button matches snapshot 1`] = `
-<Button
-  onClick={[MockFunction]}
-/>
-`;
+exports[`Button matches snapshot 1`] = `[]`;
 
-exports[`Empty matches snapshot 1`] = `<Empty />`;
+exports[`Empty matches snapshot 1`] = `[]`;
 
 exports[`List matches snapshot 1`] = `
-<List>
+[
   <ListItem
     key="0"
   >
     A
-  </ListItem>
+  </ListItem>,
   <ListItem
     key="1"
   >
     B
-  </ListItem>
+  </ListItem>,
   <ListItem
     key="2"
   >
     C
-  </ListItem>
-</List>
+  </ListItem>,
+]
 `;
 
-exports[`MyComponent matches snapshot 1`] = `<MyComponent />`;
+exports[`MyComponent matches snapshot 1`] = `[]`;
 
 exports[`MyComponent matches snapshot 2 level deep 1`] = `
-<MyComponent>
-  <div>
-    <Empty />
-    <SubComponent />
+<div>
+  <Empty />
+  <SubComponent />
+  <SubComponent>
+    <span>
+      Sub host
+    </span>
     <SubComponent>
       <span>
-        Sub host
+        Sub sub host
       </span>
-      <SubComponent>
-        <span>
-          Sub sub host
-        </span>
-      </SubComponent>
-      <div>
-        condition
-      </div>
     </SubComponent>
-    <SubComponent>
-      <SubComponent />
-    </SubComponent>
-    <p
-      className="my"
-    >
-      Hello
-    </p>
-  </div>
-</MyComponent>
+    <div>
+      condition
+    </div>
+  </SubComponent>
+  <SubComponent>
+    <SubComponent />
+  </SubComponent>
+  <p
+    className="my"
+  >
+    Hello
+  </p>
+</div>
 `;
 
 exports[`Table matches snapshot 1`] = `
-<Table>
+[
   <TableHead>
     <TableRow>
       <TableHeadCell>
@@ -74,7 +68,7 @@ exports[`Table matches snapshot 1`] = `
         Head C
       </TableHeadCell>
     </TableRow>
-  </TableHead>
+  </TableHead>,
   <TableFoot>
     <TableRow>
       <TableCell>
@@ -87,7 +81,7 @@ exports[`Table matches snapshot 1`] = `
         Foot C
       </TableCell>
     </TableRow>
-  </TableFoot>
+  </TableFoot>,
   <TableBody>
     <TableRow
       key="0"
@@ -127,6 +121,6 @@ exports[`Table matches snapshot 1`] = `
         Z
       </TableCell>
     </TableRow>
-  </TableBody>
-</Table>
+  </TableBody>,
+]
 `;

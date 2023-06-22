@@ -7,7 +7,16 @@ import type {
   Key,
   LegacyRef,
 } from 'react';
-import type { ReactTestRendererTree } from 'react-test-renderer';
+import type {
+  ReactTestRendererJSON,
+  ReactTestRendererTree,
+} from 'react-test-renderer';
+
+export function isReactTestRendererJSON(
+  value: unknown
+): value is ReactTestRendererJSON {
+  return !!value && typeof value === 'object';
+}
 
 type NamedExoticComponentFixed = Pick<
   NamedExoticComponent,
