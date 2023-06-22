@@ -28,7 +28,9 @@ describe('MyComponent', () => {
   });
 
   it('matches snapshot 2 level deep', () => {
-    expect(shallowJSON(create(<MyComponent />).toTree(), 2)).toMatchSnapshot();
+    expect(
+      shallowJSON(create(<MyComponent />).toTree(), { depth: 2 })
+    ).toMatchSnapshot();
   });
 });
 

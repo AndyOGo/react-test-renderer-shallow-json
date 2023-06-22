@@ -1,90 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HostComponent matches self-closing snapshot 1`] = `<div />`;
+exports[`HostComponent matches self-closing snapshot 1`] = `[]`;
 
-exports[`HostComponent matches self-closing snapshot with click handler 1`] = `
-<button
-  onClick={[MockFunction]}
-/>
-`;
+exports[`HostComponent matches self-closing snapshot with click handler 1`] = `[]`;
 
-exports[`HostComponent matches self-closing snapshot with key 1`] = `<div />`;
+exports[`HostComponent matches self-closing snapshot with key 1`] = `[]`;
 
 exports[`HostComponent matches self-closing snapshot with key as children 1`] = `
-<TestWrapper>
-  <div
-    key="foo"
-  />
-</TestWrapper>
-`;
-
-exports[`HostComponent matches self-closing snapshot with prop 1`] = `
 <div
-  className="foo"
+  key="foo"
 />
 `;
 
-exports[`HostComponent matches self-closing snapshot with props 1`] = `
-<div
-  className="foo"
-  title="title"
-/>
-`;
+exports[`HostComponent matches self-closing snapshot with prop 1`] = `[]`;
 
-exports[`HostComponent matches self-closing snapshot with ref 1`] = `<div />`;
+exports[`HostComponent matches self-closing snapshot with props 1`] = `[]`;
+
+exports[`HostComponent matches self-closing snapshot with ref 1`] = `[]`;
 
 exports[`HostComponent matches self-closing snapshot with ref as children 1`] = `
-<TestWrapper>
-  <div
-    ref={
-      {
-        "current": null,
-      }
+<div
+  ref={
+    {
+      "current": null,
     }
-  />
-</TestWrapper>
+  }
+/>
 `;
 
 exports[`HostComponent matches snapshot with children 1`] = `
-<div
-  className="foo"
->
+[
   <h1>
     heading
-  </h1>
+  </h1>,
   <div>
     <p>
       lorem ipsum
     </p>
-  </div>
+  </div>,
   <button
     onClick={[MockFunction]}
     type="button"
   >
     Click me
-  </button>
-</div>
+  </button>,
+]
 `;
 
-exports[`HostComponent matches snapshot with text 1`] = `
-<div>
-  lorem ipsum
-</div>
-`;
+exports[`HostComponent matches snapshot with text 1`] = `"lorem ipsum"`;
 
-exports[`HostComponent matches snapshot with text and with prop 1`] = `
-<div
-  className="foo"
->
-  lorem ipsum
-</div>
-`;
+exports[`HostComponent matches snapshot with text and with prop 1`] = `"lorem ipsum"`;
 
-exports[`HostComponent matches snapshot with text and with props 1`] = `
-<div
-  className="foo"
-  title="title"
->
-  lorem ipsum
-</div>
-`;
+exports[`HostComponent matches snapshot with text and with props 1`] = `"lorem ipsum"`;

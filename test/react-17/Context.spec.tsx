@@ -48,7 +48,7 @@ describe('ContextProvider', () => {
             <ContextConsumer />
           </ContextProvider>
         ).toTree(),
-        2
+        { depth: 2 }
       )
     ).toMatchSnapshot();
   });
@@ -105,7 +105,7 @@ describe('NamedContextProvider', () => {
             <NamedContextConsumer />
           </NamedContextProvider>
         ).toTree(),
-        2
+        { depth: 2 }
       )
     ).toMatchSnapshot();
   });

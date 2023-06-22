@@ -1,53 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Context matches snapshot 1`] = `<ContextConsumer />`;
+exports[`Context matches snapshot 1`] = `[]`;
 
 exports[`Context matches snapshot as children 1`] = `
-<TestWrapper>
-  <Context.Provider
-    value="provided"
-  >
-    <ContextConsumer />
-  </Context.Provider>
-</TestWrapper>
+<Context.Provider
+  value="provided"
+>
+  <ContextConsumer />
+</Context.Provider>
 `;
 
-exports[`ContextProvider matches snapshot 1`] = `
+exports[`ContextProvider matches snapshot 1`] = `<ContextConsumer />`;
+
+exports[`ContextProvider matches snapshot as children 1`] = `
 <ContextProvider>
   <ContextConsumer />
 </ContextProvider>
 `;
 
-exports[`ContextProvider matches snapshot as children 1`] = `
-<TestWrapper>
-  <ContextProvider>
-    <ContextConsumer />
-  </ContextProvider>
-</TestWrapper>
-`;
-
-exports[`NamedContext matches snapshot 1`] = `<NamedContextConsumer />`;
+exports[`NamedContext matches snapshot 1`] = `[]`;
 
 exports[`NamedContext matches snapshot as children 1`] = `
-<TestWrapper>
-  <NamedContextDisplayName.Provider
-    value="provided"
-  >
-    <NamedContextConsumer />
-  </NamedContextDisplayName.Provider>
-</TestWrapper>
+<NamedContextDisplayName.Provider
+  value="provided"
+>
+  <NamedContextConsumer />
+</NamedContextDisplayName.Provider>
 `;
 
-exports[`NamedContextProvider matches snapshot 1`] = `
+exports[`NamedContextProvider matches snapshot 1`] = `<NamedContextConsumer />`;
+
+exports[`NamedContextProvider matches snapshot as children 1`] = `
 <NamedContextProvider>
   <NamedContextConsumer />
 </NamedContextProvider>
-`;
-
-exports[`NamedContextProvider matches snapshot as children 1`] = `
-<TestWrapper>
-  <NamedContextProvider>
-    <NamedContextConsumer />
-  </NamedContextProvider>
-</TestWrapper>
 `;

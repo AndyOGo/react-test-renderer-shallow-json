@@ -22,12 +22,15 @@ describe('shallowJSON', () => {
   it('returns one tree', () => {
     expect(
       Array.isArray(
-        shallowJSON({
-          nodeType: 'host',
-          type: 'div',
-          props: {},
-          rendered: null,
-        })
+        shallowJSON(
+          {
+            nodeType: 'host',
+            type: 'div',
+            props: {},
+            rendered: null,
+          },
+          { skipRoot: false }
+        )
       )
     ).toBeFalsy();
   });
@@ -35,20 +38,23 @@ describe('shallowJSON', () => {
   it('returns multiple trees', () => {
     expect(
       Array.isArray(
-        shallowJSON([
-          {
-            nodeType: 'host',
-            type: 'div',
-            props: {},
-            rendered: null,
-          },
-          {
-            nodeType: 'host',
-            type: 'div',
-            props: {},
-            rendered: null,
-          },
-        ])
+        shallowJSON(
+          [
+            {
+              nodeType: 'host',
+              type: 'div',
+              props: {},
+              rendered: null,
+            },
+            {
+              nodeType: 'host',
+              type: 'div',
+              props: {},
+              rendered: null,
+            },
+          ],
+          { skipRoot: false }
+        )
       )
     ).toBeTruthy();
   });
@@ -75,9 +81,45 @@ describe('shallowJSON', () => {
       rendered: null,
     };
 
-    shallowJSON(tree, 2);
+    shallowJSON(tree, { depth: 2 });
 
     expect(mapTrees).toBeCalled();
     expect(mapTrees).toBeCalledWith(tree, 2);
+  });
+
+  it('skips root node', () => {
+    expect(
+      shallowJSON(
+        {
+          nodeType: 'host',
+          type: 'div',
+          props: {},
+          rendered: null,
+        },
+        { skipRoot: true }
+      )
+    ).toEqual([]);
+  });
+
+  it('skips root nodes', () => {
+    expect(
+      shallowJSON(
+        [
+          {
+            nodeType: 'host',
+            type: 'div',
+            props: {},
+            rendered: null,
+          },
+          {
+            nodeType: 'host',
+            type: 'div',
+            props: {},
+            rendered: null,
+          },
+        ],
+        { skipRoot: true }
+      )
+    ).toEqual([]);
   });
 });

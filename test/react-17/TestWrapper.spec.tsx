@@ -12,7 +12,7 @@ describe('TestWrapper', () => {
             <div data-children>Children</div>
           </TestWrapper>
         ).toTree(),
-        depth
+        { depth }
       )
     ).toMatchSnapshot();
   });
@@ -31,7 +31,7 @@ describe('TestWrapper', () => {
               ]}
             </TestWrapper>
           ).toTree(),
-          depth
+          { depth }
         )
       ).toMatchSnapshot();
     }
@@ -52,7 +52,7 @@ describe('TestWrapper', () => {
               ]}
             </TestWrapper>
           ).toTree(),
-          depth
+          { depth }
         )
       ).toMatchSnapshot();
     }
