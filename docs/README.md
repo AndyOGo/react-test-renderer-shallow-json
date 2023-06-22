@@ -12,7 +12,7 @@ react-test-renderer-shallow-json
 
 ### shallowJSON
 
-▸ **shallowJSON**(`trees`, `depth?`): ``null`` \| `ReactTestRendererNode` \| `ReactTestRendererNode`[]
+▸ **shallowJSON**(`trees`, `options?`): ``null`` \| `ReactTestRendererNode` \| `ReactTestRendererNode`[]
 
 Return an object representing the rendered tree.
 This tree contains the platform-specific nodes like `<div>` or `<View>` and includes the user-written components as well.
@@ -21,10 +21,10 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `trees` | ``null`` \| `ReactTestRendererTreeFixed` \| `ReactTestRendererTreeFixed`[] | `undefined` |
-| `depth` | `number` | `1` |
+| Name | Type |
+| :------ | :------ |
+| `trees` | ``null`` \| `ReactTestRendererTreeFixed` \| `ReactTestRendererTreeFixed`[] |
+| `options` | `ShalllowJSONOptions` |
 
 #### Returns
 
@@ -32,4 +32,4 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 
 #### Defined in
 
-[shallowJSON.ts:11](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/f26c627/src/shallowJSON.ts#L11)
+[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/17a9579/src/shallowJSON.ts#L25)

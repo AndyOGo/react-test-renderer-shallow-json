@@ -1,5 +1,6 @@
 import type { Context, ElementType, ForwardRefExoticComponent, ForwardRefRenderFunction, NamedExoticComponent, Key, LegacyRef } from 'react';
-import type { ReactTestRendererTree } from 'react-test-renderer';
+import type { ReactTestRendererJSON, ReactTestRendererTree } from 'react-test-renderer';
+export declare function isReactTestRendererJSON(value: unknown): value is ReactTestRendererJSON;
 type NamedExoticComponentFixed = Pick<NamedExoticComponent, '$$typeof' | 'displayName'> & {
     type?: ReactTestRendererTreeFixed['type'];
 };

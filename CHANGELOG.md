@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.6...v1.1.0) (2023-06-22)
+
+
+### Features
+
+* skip root component by default ([047c9a5](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/047c9a5155b70ed084cefcd4bbd8fb99a1990f74))
+
 ## [1.0.6](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.0.5...v1.0.6) (2023-04-23)
 
 
