@@ -4,9 +4,30 @@ react-test-renderer-shallow-json
 
 ## Table of contents
 
+### Type Aliases
+
+- [ShalllowJSONOptions](README.md#shalllowjsonoptions)
+
 ### Functions
 
 - [shallowJSON](README.md#shallowjson)
+
+## Type Aliases
+
+### ShalllowJSONOptions
+
+Ƭ **ShalllowJSONOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `depth?` | `number` | The depth level specifying how deep a nested tree structure should be rendered. Defaults to 1. |
+| `skipRoot?` | `boolean` | Skip the component under test from snapshot output. Defaults to true. |
+
+#### Defined in
+
+[shallowJSON.ts:8](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/1efca68/src/shallowJSON.ts#L8)
 
 ## Functions
 
@@ -24,7 +45,7 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 | Name | Type |
 | :------ | :------ |
 | `trees` | ``null`` \| `ReactTestRendererTreeFixed` \| `ReactTestRendererTreeFixed`[] |
-| `options` | `ShalllowJSONOptions` |
+| `options` | [`ShalllowJSONOptions`](README.md#shalllowjsonoptions) |
 
 #### Returns
 
@@ -32,4 +53,4 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 
 #### Defined in
 
-[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/d465bf4/src/shallowJSON.ts#L25)
+[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/1efca68/src/shallowJSON.ts#L25)

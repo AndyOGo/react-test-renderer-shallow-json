@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.2...v1.1.3) (2023-09-11)
+
+
+### Bug Fixes
+
+* export ShalllowJSONOptions too ([b44988b](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/b44988b05ef76e501259966b5afdf4a626569294))
+
 ## [1.1.2](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.1...v1.1.2) (2023-06-22)
 
 
