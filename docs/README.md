@@ -27,7 +27,7 @@ react-test-renderer-shallow-json
 
 #### Defined in
 
-[shallowJSON.ts:8](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/1efca68/src/shallowJSON.ts#L8)
+[shallowJSON.ts:8](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/ae09564/src/shallowJSON.ts#L8)
 
 ## Functions
 
@@ -53,4 +53,4 @@ This is handy for **shallow** [snapshot testing](https://facebook.github.io/jest
 
 #### Defined in
 
-[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/1efca68/src/shallowJSON.ts#L25)
+[shallowJSON.ts:25](https://github.com/AndyOGo/react-test-renderer-shallow-json/blob/ae09564/src/shallowJSON.ts#L25)

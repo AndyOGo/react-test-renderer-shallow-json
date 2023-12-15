@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.3...v1.1.4) (2023-12-15)
+
+
+### Bug Fixes
+
+* type error can't read nodeType of null ([3cd3e3d](https://github.com/AndyOGo/react-test-renderer-shallow-json/commit/3cd3e3d3c656783620c50dcf01c5dbc84b659e7f))
+
 ## [1.1.3](https://github.com/AndyOGo/react-test-renderer-shallow-json/compare/v1.1.2...v1.1.3) (2023-09-11)
 
 

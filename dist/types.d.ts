@@ -14,7 +14,7 @@ type ForwardRefComponent = Pick<ForwardRefExoticComponent<unknown>, '$$typeof' |
 export type ReactTestRendererTreeFixed = Omit<ReactTestRendererTree, 'type' | 'props' | 'children' | 'rendered' | 'instance'> & {
     type: string | symbol | ElementType | NamedExoticComponentFixed | ContextComponent | ForwardRefComponent;
     props: ReactTestRendererTreeProps;
-    rendered: null | ReactTestRendererTreeNodeFixed | ReactTestRendererTreeNodeFixed[];
+    rendered: null | ReactTestRendererTreeNodeFixed | (null | ReactTestRendererTreeNodeFixed)[];
 };
 export type ReactTestRendererTreeNodeFixed = string | ReactTestRendererTreeFixed;
 type ReactTestRendererTreeProps = {
