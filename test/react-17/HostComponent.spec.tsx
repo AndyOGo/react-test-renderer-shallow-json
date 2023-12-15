@@ -101,4 +101,68 @@ describe('HostComponent', () => {
       )
     ).toMatchSnapshot();
   });
+
+  it('matches snapshot with dynamic children', () => {
+    expect(
+      shallowJSON(
+        create(
+          <ol className="foo">
+            {['a', 'b', 'c'].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ol>
+        ).toTree()
+      )
+    ).toMatchSnapshot();
+  });
+
+  it('matches snapshot with empty children', () => {
+    expect(
+      shallowJSON(
+        create(
+          <ol className="foo">
+            {[].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ol>
+        ).toTree()
+      )
+    ).toMatchSnapshot();
+  });
+
+  it('matches snapshot with subsequent dynamic children', () => {
+    expect(
+      shallowJSON(
+        create(
+          <ol className="foo">
+            {['a', 'b', 'c'].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+
+            {['d', 'e', 'f'].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ol>
+        ).toTree()
+      )
+    ).toMatchSnapshot();
+  });
+
+  it('matches snapshot with empty subsequent dynamic children', () => {
+    expect(
+      shallowJSON(
+        create(
+          <ol className="foo">
+            {[].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+
+            {[].map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ol>
+        ).toTree()
+      )
+    ).toMatchSnapshot();
+  });
 });

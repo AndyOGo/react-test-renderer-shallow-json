@@ -47,6 +47,47 @@ exports[`HostComponent matches snapshot with children 1`] = `
 ]
 `;
 
+exports[`HostComponent matches snapshot with dynamic children 1`] = `
+[
+  <li>
+    a
+  </li>,
+  <li>
+    b
+  </li>,
+  <li>
+    c
+  </li>,
+]
+`;
+
+exports[`HostComponent matches snapshot with empty children 1`] = `[]`;
+
+exports[`HostComponent matches snapshot with empty subsequent dynamic children 1`] = `[]`;
+
+exports[`HostComponent matches snapshot with subsequent dynamic children 1`] = `
+[
+  <li>
+    a
+  </li>,
+  <li>
+    b
+  </li>,
+  <li>
+    c
+  </li>,
+  <li>
+    d
+  </li>,
+  <li>
+    e
+  </li>,
+  <li>
+    f
+  </li>,
+]
+`;
+
 exports[`HostComponent matches snapshot with text 1`] = `"lorem ipsum"`;
 
 exports[`HostComponent matches snapshot with text and with prop 1`] = `"lorem ipsum"`;

@@ -1,5 +1,8 @@
 import type { ReactTestRendererJSON } from 'react-test-renderer';
-import type { ReactTestRendererTreeFixed } from './types';
+import type {
+  ReactTestRendererTreeFixed,
+  ReactTestRendererTreeNodeFixed,
+} from './types';
 import { mapTree } from './mapTree';
 import { dive } from './dive';
 
@@ -12,7 +15,9 @@ export function mapTrees(
   }
 
   if (Array.isArray(trees)) {
-    return trees.map((tree) => mapTree(tree, dive(tree, depth)));
+    return trees
+      .filter((tree): tree is ReactTestRendererTreeNodeFixed => tree !== null)
+      .map((tree) => mapTree(tree, dive(tree, depth)));
   }
 
   return [mapTree(trees, dive(trees, depth))];

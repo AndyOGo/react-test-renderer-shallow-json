@@ -53,7 +53,7 @@ export type ReactTestRendererTreeFixed = Omit<
   rendered:
     | null
     | ReactTestRendererTreeNodeFixed
-    | ReactTestRendererTreeNodeFixed[];
+    | (null | ReactTestRendererTreeNodeFixed)[];
 };
 
 export type ReactTestRendererTreeNodeFixed =

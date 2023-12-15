@@ -6,6 +6,10 @@ describe('mapTrees', () => {
     expect(mapTrees(null)).toBe(null);
   });
 
+  it('return empty render', () => {
+    expect(mapTrees([null, null])).toEqual([]);
+  });
+
   it('returns one tree', () => {
     expect(mapTrees('foo')).toEqual(['foo']);
   });
